@@ -305,7 +305,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -314,6 +314,7 @@ textarea {
 /* line 1, sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  font-family: "Merriweather", serif;
 }
 
 /* line 1, sass/typography/_copy.scss */
