@@ -1,6 +1,6 @@
 /*!
 Theme Name: Pleiades Web 2016
-Theme URI: http://underscores.me/
+Theme URI: http://pleiadesdigital.com/
 Author: Ronaldo Ortiz
 Author URI: http://www.pleiadesdigital.com
 Description: Responsive theme using sass and compass.
@@ -581,7 +581,7 @@ a {
 }
 /* line 4, sass/navigation/_links.scss */
 a:visited {
-  color: darkgreen;
+  color: olive;
 }
 /* line 7, sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
