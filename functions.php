@@ -48,13 +48,11 @@ if (!function_exists('pleiadesweb16_setup')) :
 endif; //if (!function_exists('pleiadesweb16_setup'))
 add_action( 'after_setup_theme', 'pleiadesweb16_setup' );
 
-
 // CONTENT WIDTH
 function pleiadesweb16_content_width() {
 	$GLOBALS['content_width'] = apply_filters('pleiadesweb16_content_width', 640);
 }
 add_action('after_setup_theme', 'pleiadesweb16_content_width', 0);
-
 
 // REGISTER SIDEBAR
 function pleiadesweb16_widgets_init() {
@@ -75,8 +73,13 @@ function pleiadesweb16_scripts() {
 
 	wp_enqueue_style('pleiadesweb16-style', get_stylesheet_uri());
 
-	// Fonts
+	// FONTS
+	// Google fonts
   wp_enqueue_style('pleiadesweb16-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,400italic,300italic|Merriweather:400,300,700');
+
+	// Local fonts
+	//wp_enqueue_style('pleiadesweb16-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css');
+
 
 	wp_enqueue_script('pleiadesweb16-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
 

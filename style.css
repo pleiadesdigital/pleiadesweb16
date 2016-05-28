@@ -305,10 +305,11 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-family: "Roboto", serif;
+  font-size: 14.4px;
+  font-size: 0.9rem;
   line-height: 1.5;
+  font-weight: 300;
 }
 
 /* line 1, sass/typography/_headings.scss */
