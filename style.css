@@ -304,18 +304,58 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #191919;
   font-family: "Roboto", serif;
-  font-size: 14.4px;
-  font-size: 0.9rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   font-weight: 300;
+}
+
+/* line 13, sass/typography/_typography.scss */
+.site-content {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6em;
 }
 
 /* line 1, sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-family: "Merriweather", serif;
+  line-height: 1.3em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* line 8, sass/typography/_headings.scss */
+h1 {
+  font-size: 2.4em;
+}
+
+/* line 9, sass/typography/_headings.scss */
+h2 {
+  font-size: 2.2em;
+}
+
+/* line 10, sass/typography/_headings.scss */
+h3 {
+  font-size: 2em;
+}
+
+/* line 11, sass/typography/_headings.scss */
+h4 {
+  font-size: 1.8em;
+}
+
+/* line 12, sass/typography/_headings.scss */
+h5 {
+  font-size: 1.6em;
+}
+
+/* line 13, sass/typography/_headings.scss */
+h6 {
+  font-size: 1.4em;
 }
 
 /* line 1, sass/typography/_copy.scss */
