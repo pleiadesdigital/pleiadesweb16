@@ -26,3 +26,21 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+// GLOBAL
+.site-main {
+  border: 2px solid darkmagenta;
+	margin: 1.4em;
+  @include breakpoint(30em) {
+    margin: 1.8em;
+  }
+  @include breakpoint(57em) {
+    @include container (45em);
+    margin: 1.8em auto;
+  }
+  @include font-size(0.9);
+  line-height: 1.6em;
+  @include breakpoint($desktop) {
+    @include font-size(1.125);
+  }
+}

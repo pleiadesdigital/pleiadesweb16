@@ -43,6 +43,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+
+// Compass imports
+@import "compass";
+@import "compass/reset";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import "compass/css3/filter";
+@import "compass/css3/flexbox";
+@import "compass/css3/transition";
+
+// External libraries
+@import "susy";
+@import "breakpoint";
+
+// Other imports
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 

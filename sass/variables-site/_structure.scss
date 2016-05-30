@@ -1,2 +1,14 @@
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
+
+// SUSY setup
+$susy: (
+  columns: 12,
+  container: 1200px,
+  gutters: 1/8,
+  gutter-position: inside
+);
+
+//Breakpoint media queries
+$desktop: 40em;
+
