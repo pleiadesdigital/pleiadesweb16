@@ -29,8 +29,9 @@
 
 // GLOBAL
 .site-main {
-  border: 2px solid darkmagenta;
+  border: 1px dashed darkmagenta;
 	margin: 1.4em;
+  overflow: hidden;
   @include breakpoint(30em) {
     margin: 1.8em;
   }

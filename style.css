@@ -396,32 +396,38 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 9, sass/typography/_headings.scss */
 h1 {
-  font-size: 2.4em;
+  font-size: 32px;
+  font-size: 2rem;
 }
 
 /* line 10, sass/typography/_headings.scss */
 h2 {
-  font-size: 2.2em;
+  font-size: 28.8px;
+  font-size: 1.8rem;
 }
 
 /* line 11, sass/typography/_headings.scss */
 h3 {
-  font-size: 2em;
+  font-size: 25.6px;
+  font-size: 1.6rem;
 }
 
 /* line 12, sass/typography/_headings.scss */
 h4 {
-  font-size: 1.8em;
+  font-size: 22.4px;
+  font-size: 1.4rem;
 }
 
 /* line 13, sass/typography/_headings.scss */
 h5 {
-  font-size: 1.6em;
+  font-size: 19.2px;
+  font-size: 1.2rem;
 }
 
 /* line 14, sass/typography/_headings.scss */
 h6 {
-  font-size: 1.4em;
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* line 1, sass/typography/_copy.scss */
@@ -913,6 +919,114 @@ a:hover, a:active {
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+/* line 1, sass/site/primary/_header.scss */
+.site-header {
+  border: 1px dashed darkgreen;
+  background-color: #0f0f0f;
+  background: rgba(0, 0, 0, 0.7) url("http://localhost/~ronyortiz/pleiadesweb16/wp-content/themes/pleiadesweb16/images/misc/pleiades-digital-online-marketing-agency.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 5, sass/site/primary/_header.scss */
+.site-header .site-logo {
+  position: relative;
+}
+/* line 7, sass/site/primary/_header.scss */
+.site-header .site-logo a {
+  position: absolute;
+  z-index: 10;
+  top: 1em;
+  left: 1em;
+  display: block;
+  width: 2.2em;
+  height: 2.2em;
+  background: #000000;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+/* line 21, sass/site/primary/_header.scss */
+.site-header .site-logo a:hover .site-firstletter, .site-header .site-logo a:focus .site-firstletter {
+  background: #FFFFFF;
+  color: #000000;
+}
+/* line 26, sass/site/primary/_header.scss */
+.site-header .site-logo a .site-firstletter {
+  font-family: "Merriweather", serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3em;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+/* line 37, sass/site/primary/_header.scss */
+.site-header .site-branding {
+  text-align: center;
+}
+/* line 39, sass/site/primary/_header.scss */
+.site-header .site-branding .site-title {
+  margin: 1.7em 1em 0px;
+  font-family: "Roboto", serif;
+  font-size: 38.4px;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.3em;
+  color: #FFF;
+  text-transform: uppercase;
+  word-break: break-word;
+}
+@media (max-width: 699px) {
+  /* line 39, sass/site/primary/_header.scss */
+  .site-header .site-branding .site-title {
+    font-size: 28.8px;
+    font-size: 1.8rem;
+  }
+}
+/* line 51, sass/site/primary/_header.scss */
+.site-header .site-branding .site-title a {
+  text-decoration: none;
+  color: inherit;
+}
+/* line 55, sass/site/primary/_header.scss */
+.site-header .site-branding .site-title a:hover, .site-header .site-branding .site-title a:focus {
+  text-decoration: underline;
+}
+/* line 59, sass/site/primary/_header.scss */
+.site-header .site-branding .site-title a::after {
+  display: block;
+  content: "";
+  margin: 0.7em auto 0px;
+  width: 3em;
+  border-bottom: 1px solid #FFF;
+  opacity: 0.5;
+}
+/* line 69, sass/site/primary/_header.scss */
+.site-header .site-branding .site-description {
+  color: #FFF;
+  margin: 1em 1em 2em;
+  font-weight: 300;
+  font-size: 20.8px;
+  font-size: 1.3rem;
+}
+@media (max-width: 699px) {
+  /* line 69, sass/site/primary/_header.scss */
+  .site-header .site-branding .site-description {
+    font-size: 17.6px;
+    font-size: 1.1rem;
+  }
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 /* line 1, sass/site/primary/_posts-and-pages.scss */
@@ -952,8 +1066,9 @@ a:hover, a:active {
 
 /* line 31, sass/site/primary/_posts-and-pages.scss */
 .site-main {
-  border: 2px solid darkmagenta;
+  border: 1px dashed darkmagenta;
   margin: 1.4em;
+  overflow: hidden;
   font-size: 14.4px;
   font-size: 0.9rem;
   line-height: 1.6em;
