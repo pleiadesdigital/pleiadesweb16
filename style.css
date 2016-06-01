@@ -931,11 +931,17 @@ a:hover, a:active {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 5, sass/site/primary/_header.scss */
+@media (min-width: 50em) {
+  /* line 1, sass/site/primary/_header.scss */
+  .site-header {
+    min-height: 4em;
+  }
+}
+/* line 8, sass/site/primary/_header.scss */
 .site-header .site-logo {
   position: relative;
 }
-/* line 7, sass/site/primary/_header.scss */
+/* line 10, sass/site/primary/_header.scss */
 .site-header .site-logo a {
   position: absolute;
   z-index: 10;
@@ -949,10 +955,9 @@ a:hover, a:active {
   color: #FFFFFF;
   text-decoration: none;
 }
-/* line 21, sass/site/primary/_header.scss */
-.site-header .site-logo a:hover .site-firstletter, .site-header .site-logo a:focus .site-firstletter {
-  background: #FFFFFF;
-  color: #000000;
+/* line 22, sass/site/primary/_header.scss */
+.site-header .site-logo a:hover, .site-header .site-logo a:focus {
+  outline: 2px solid #FFFFFF;
 }
 /* line 26, sass/site/primary/_header.scss */
 .site-header .site-logo a .site-firstletter {
@@ -961,16 +966,12 @@ a:hover, a:active {
   font-weight: 700;
   text-align: center;
   line-height: 1.3em;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
-/* line 37, sass/site/primary/_header.scss */
+/* line 36, sass/site/primary/_header.scss */
 .site-header .site-branding {
   text-align: center;
 }
-/* line 39, sass/site/primary/_header.scss */
+/* line 38, sass/site/primary/_header.scss */
 .site-header .site-branding .site-title {
   margin: 1.7em 1em 0px;
   font-family: "Roboto", serif;
@@ -983,22 +984,22 @@ a:hover, a:active {
   word-break: break-word;
 }
 @media (max-width: 699px) {
-  /* line 39, sass/site/primary/_header.scss */
+  /* line 38, sass/site/primary/_header.scss */
   .site-header .site-branding .site-title {
     font-size: 28.8px;
     font-size: 1.8rem;
   }
 }
-/* line 51, sass/site/primary/_header.scss */
+/* line 50, sass/site/primary/_header.scss */
 .site-header .site-branding .site-title a {
   text-decoration: none;
   color: inherit;
 }
-/* line 55, sass/site/primary/_header.scss */
+/* line 54, sass/site/primary/_header.scss */
 .site-header .site-branding .site-title a:hover, .site-header .site-branding .site-title a:focus {
   text-decoration: underline;
 }
-/* line 59, sass/site/primary/_header.scss */
+/* line 58, sass/site/primary/_header.scss */
 .site-header .site-branding .site-title a::after {
   display: block;
   content: "";
@@ -1007,7 +1008,7 @@ a:hover, a:active {
   border-bottom: 1px solid #FFF;
   opacity: 0.5;
 }
-/* line 69, sass/site/primary/_header.scss */
+/* line 68, sass/site/primary/_header.scss */
 .site-header .site-branding .site-description {
   color: #FFF;
   margin: 1em 1em 2em;
@@ -1016,7 +1017,7 @@ a:hover, a:active {
   font-size: 1.3rem;
 }
 @media (max-width: 699px) {
-  /* line 69, sass/site/primary/_header.scss */
+  /* line 68, sass/site/primary/_header.scss */
   .site-header .site-branding .site-description {
     font-size: 17.6px;
     font-size: 1.1rem;

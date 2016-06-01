@@ -24,19 +24,29 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'pleiadesweb16' ); ?></a>
   <header id="masthead" class="site-header" role="banner">
+
+<!--		SITE LOGO-->
     <div class="site-logo">
       <?php $site_title = get_bloginfo('name'); ?>
       <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
         <div class="screen-reader-text">
           <?php printf(esc_html('Página de inicio de %1$s', 'pleiadesweb16'), $site_title); ?>
         </div><!--class="screen-reader-text"-->
-        <div class="site-firstletter" aria-hidden="true">
-          <?php echo substr($site_title, 0, 1); ?>
-        </div><!--class="site-firstletter"-->
+				<?php if (has_site_icon()) { ?>
+					<div class="site-firstletter" aria-hidden="true">
+						<?php $site_icon = esc_url(get_site_icon_url(270)); ?>
+						<img class="site-icon" src="<?php echo $site_icon; ?>" alt="">
+					</div><!--class="site-firstletter"-->
+				<?php } else { ?>
+					<div class="site-firstletter" aria-hidden="true">
+						<?php echo substr($site_title, 0, 1); ?>
+					</div><!--class="site-firstletter"-->
+				<?php } ?>
       </a>
-    </div>
+    </div><!--class="site-logo"-->
+
 <!--		BRANDING-->
-		<div class="site-branding">
+		<div class="site-branding<?php if(is_singular()) { echo ' screen-reader-text'; } ?>">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

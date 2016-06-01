@@ -1,6 +1,9 @@
 .site-header {
   border: 1px dashed darkgreen;
   background-color: rgb(15, 15, 15);
+  @include breakpoint(50em) {
+    min-height: 4em;
+  }
   @include back-image($backimage1);
   .site-logo {
     position: relative;
@@ -18,10 +21,7 @@
       text-decoration: none;
       &:hover,
       &:focus {
-        .site-firstletter {
-          background: #FFFFFF;
-          color: #000000;
-        }
+        outline: 2px solid #FFFFFF;
       } //&:hover, &:focus
       .site-firstletter {
         font-family: $font__title;
@@ -29,7 +29,6 @@
         font-weight: 700;
         text-align: center;
         line-height: 1.3em;
-        @include single-transition();
       } //.site-firstletter
     } //a
 

@@ -17,6 +17,8 @@ if (!function_exists('pleiadesweb16_setup')) :
 		// Navigation menus -> register
 		register_nav_menus( array(
 			'primary' => esc_html__('Primary', 'pleiadesweb16'),
+			'secondary' => esc_html__('Secondary', 'pleiadesweb16'),
+
 		));
 
 		// Markup for valid HTML5
@@ -79,7 +81,6 @@ function pleiadesweb16_scripts() {
 
 	// Local fonts
 	//wp_enqueue_style('pleiadesweb16-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css');
-
 
 	wp_enqueue_script('pleiadesweb16-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
 
