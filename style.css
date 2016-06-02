@@ -715,89 +715,155 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_menus.scss */
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
+  /*clear: both;
+	display: block;
+	float: left;
+	width: 100%;*/
 }
-/* line 7, sass/navigation/_menus.scss */
+/* line 6, sass/navigation/_menus.scss */
 .main-navigation ul {
-  display: none;
   list-style: none;
   margin: 0;
-  padding-left: 0;
 }
-/* line 13, sass/navigation/_menus.scss */
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: -999em;
-  z-index: 99999;
+/* line 9, sass/navigation/_menus.scss */
+.main-navigation ul li {
+  border-top: 1px solid rgba(51, 51, 51, 0.3);
+  position: relative;
 }
-/* line 21, sass/navigation/_menus.scss */
-.main-navigation ul ul ul {
+/* line 20, sass/navigation/_menus.scss */
+.main-navigation ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.8em 0px;
+  position: relative;
+}
+/* line 26, sass/navigation/_menus.scss */
+.main-navigation ul li ul {
+  display: none;
+  margin-left: 0.8em;
+}
+/* line 30, sass/navigation/_menus.scss */
+.main-navigation ul li ul li:hover > ul, .main-navigation ul li ul li.focus > ul {
+  left: 100%;
+}
+/* line 34, sass/navigation/_menus.scss */
+.main-navigation ul li ul li a {
+  border: 1px dotted greenyellow;
+  width: 200px;
+}
+/* line 37, sass/navigation/_menus.scss */
+.main-navigation ul li ul li a:hover, .main-navigation ul li ul li a.focus {
+  border: 1px solid magenta;
+}
+/* line 42, sass/navigation/_menus.scss */
+.main-navigation ul li ul li ul {
   left: -999em;
   top: 0;
 }
-/* line 27, sass/navigation/_menus.scss */
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
+/* line 48, sass/navigation/_menus.scss */
+.main-navigation ul li .current-menu-item > a,
+.main-navigation ul li .current-menu-ancestor > a {
+  font-weight: 700;
 }
-/* line 33, sass/navigation/_menus.scss */
-.main-navigation ul ul a {
-  width: 200px;
+/* line 55, sass/navigation/_menus.scss */
+.main-navigation ul li .menu-item-has-children > a {
+  padding-right: 48px;
 }
-/* line 46, sass/navigation/_menus.scss */
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
+/* line 58, sass/navigation/_menus.scss */
+.main-navigation ul li .dropdown-toggle {
+  background: transparent;
+  border: 0px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  content: "";
+  height: 42px;
+  padding: 0px;
+  position: absolute;
+  text-transform: lowercase;
+  top: 3px;
+  right: 0px;
+  width: 42px;
 }
-/* line 52, sass/navigation/_menus.scss */
-.main-navigation li {
-  float: left;
+/* line 72, sass/navigation/_menus.scss */
+.main-navigation ul li .dropdown-toggle:after {
+  color: #333333;
+  content: "\f431";
+  font-size: 24px;
+  line-height: 42px;
   position: relative;
+  top: 0px;
+  left: 1px;
+  width: 42px;
 }
-/* line 61, sass/navigation/_menus.scss */
-.main-navigation a {
+/* line 82, sass/navigation/_menus.scss */
+.main-navigation ul li .dropdown-toggle:hover, .main-navigation ul li .dropdown-toggle:focus {
+  background-color: rgba(51, 51, 51, 0.1);
+}
+/* line 86, sass/navigation/_menus.scss */
+.main-navigation ul li .dropdown-toggle:focus {
+  outline: 1px solid rgba(51, 51, 51, 0.3);
+}
+/* line 89, sass/navigation/_menus.scss */
+.main-navigation ul li .dropdown-toggle.toggle-on:after {
+  content: "\f432";
+}
+/* line 95, sass/navigation/_menus.scss */
+.main-navigation .nav-menu > li:first-child {
+  border-top: 0;
+}
+/* line 98, sass/navigation/_menus.scss */
+.main-navigation .menu-item-description {
+  color: rgba(51, 51, 51, 0.7);
+  font-family: "Roboto", serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 0.5em;
+}
+/* line 106, sass/navigation/_menus.scss */
+.main-navigation .toggled-on {
   display: block;
-  text-decoration: none;
+}
+
+/* line 112, sass/navigation/_menus.scss */
+.no-js .main-navigation ul ul {
+  display: block;
 }
 
 /* Small menu. */
-/* line 74, sass/navigation/_menus.scss */
+/* line 118, sass/navigation/_menus.scss */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-  /* line 80, sass/navigation/_menus.scss */
+  /* line 124, sass/navigation/_menus.scss */
   .menu-toggle {
     display: none;
   }
 
-  /* line 83, sass/navigation/_menus.scss */
+  /* line 127, sass/navigation/_menus.scss */
   .main-navigation ul {
     display: block;
   }
 }
-/* line 92, sass/navigation/_menus.scss */
+/* line 136, sass/navigation/_menus.scss */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-/* line 97, sass/navigation/_menus.scss */
+/* line 141, sass/navigation/_menus.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%;
 }
-/* line 102, sass/navigation/_menus.scss */
+/* line 146, sass/navigation/_menus.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
