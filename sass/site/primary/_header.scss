@@ -1,5 +1,4 @@
 .site-header {
-  border: 1px dashed darkgreen;
   background-color: rgb(15, 15, 15);
   @include breakpoint(50em) {
     min-height: 4em;
