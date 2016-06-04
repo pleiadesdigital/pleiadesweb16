@@ -113,6 +113,29 @@
     }
   });
 
+  // Hide show toggle button on scroll
+
+  var position, direction, previous;
+  $(window).scroll(function(){
+    if ($(this).scrollTop() >= position) {
+      direction = 'up';
+      if (direction !== previous) {
+        $('.menu-toggle').addClass('hide');
+        previous = direction;
+      } //if (direction !== previous)
+    } else {
+      direction = 'down';
+      if (direction !== previous) {
+        $('.menu-toggle').removeClass('hide');
+        previous = direction;
+      } //if (direction !== previous)
+    }//if ($(this).scrollTop() >= position)
+    position = $(this).scrollTop();
+  }); //(window).scroll(function()
+
+
+
+
 })(jQuery);
 
 

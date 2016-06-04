@@ -13,7 +13,6 @@
     li {
       position: relative;
       border-top: 1px solid rgba(51, 51, 51, 0.1);
-      position: relative;
       &:hover > a,
       &.focus > a {
 
@@ -130,12 +129,13 @@
   .toggled-on {
     display: block;
   } //.toggled-on
-
 } //.main-navigation
 
 .no-js .main-navigation ul ul {
   display: block;
 }
+
+
 
 /*******************************************/
 /************ SMALL MENU *******************/
@@ -156,53 +156,42 @@
   background-color: #000;
   color: #fff;
   border: solid 2px #fff;
-  transition: all ease-out 400ms;
+  @include single-transition();
+  @include transition-duration(0.4s);
 }
 
 .menu-toggle.hide {
-  bottom: -2.5em;
+  top: -2.5em;
 }
-
-/* Make sure the button doesn't hide when menu is open. */
-
-.toggled .menu-toggle.hide {
-  bottom: 1em;
-}
-
 
 .menu-toggle:hover,
 .menu-toggle:focus {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
-  .main-navigation ul {
-    display: block;
-  }
-}
 
-/* Hovering menu */
+/* Small menu toggled on (.toggled) */
 
-.main-navigation.toggled {
-  position: fixed;
-  top: 6em;
-  padding: 1em;
-  z-index: 1;
-}
+.main-navigation {
+  &.toggled {
+    position: fixed;
+    top: 6em;
+    padding: 1em 2em;
+    z-index: 1;
+    ul {
+      max-height: calc(100vh - 8em);
+      overflow-y: auto;
+    } //ul
+    .nav-menu {
+      padding: 0px;
+      border-top: 1px dashed #FFFFFF;
+      border-bottom: 1px dashed #FFFFFF;
+      margin-bottom: 3em;
+      background-color:#000000;
+    } //.nav-menu
+  } //.toggled
+} //.main-navigation
 
-.nav-menu {
-  padding: 0px 1em;
-  margin-bottom: 3em;
-  background-color: #000;
-}
-
-.main-navigation.toggled ul {
-  max-height: calc(100vh - 8em);
-  overflow-y: auto;
-}
 
 .main-navigation.toggled ul ul {
   display: none;
@@ -213,12 +202,116 @@
   display: block;
 }
 
+/* Make sure the button doesn't hide when menu is open. */
+.toggled .menu-toggle.hide {
+  top: 1em;
+}
+
+//TOGGLES horizontal and vertical menus
+
+@include breakpoint(min-width 50em)   {
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation ul {
+    display: block;
+  }
+}
+
+//HORIZONTAL MENU rules
+@include breakpoint(min-width 50em) {
+  .main-navigation,
+  .main-navigation.toggled {
+    @include container();
+    position: relative;
+    min-height: 3.5em;
+    margin: 0px auto;
+    padding: 0px 3.5em;
+    background-color: #000000;
+    .nav-menu {
+      padding: 0.3em 0px 0px 0px;
+      background-color: transparent;
+    } //.nav-menu
+  } //.main-navigation, .main-navigation.toggled
+  .main-navigation {
+    ul {
+      max-height: none;
+      padding-left: 0px;
+      text-align: center;
+      li {
+        display: inline-block;
+        border: none;
+        a {
+          border-bottom: none;
+          padding-right: 2em;
+          padding-left: 2em;
+          &:hover,
+          &:focus {
+            background: transparent;
+            color: #FFFFFF;
+            text-decoration: underline;
+            //outline: 1px solid #B3B3B3;
+          } //&:hover, &:focus
+        } //a (1st level)
+        ul {
+          outline: 1px solid #333333;
+          li {
+            display: block;
+            text-align: left;
+            a {
+              &:last-child {
+                border-bottom: none;
+              } //&:last-child
+              &:hover,
+              &:focus {
+                background: #EEEEEE;
+                color: #000000;
+                text-decoration: none;
+              } //&:hover, &:focus
+              ul {
+                li {
+                  a {
+                    padding-left: 2em;
+                  } //a (3rd level)
+                } // li(3ed level)
+              } // ul(3ed level)
+            } //a (2nd level)
+          } //li (2nd level)
+          &.toggled-on {
+            position: absolute;
+            width: 12em;
+            display: block;
+            z-index: 10;
+            margin-left: 0;
+            background: #000000;
+          } //&.toggled-on
+        } //ul (2nd level)
+        .dropdown-toggle {
+          position: absolute;
+          border: none;
+          top: 11px;
+          right: 0px;
+          background: transparent;
+          &::after {
+            line-height: 27px;
+            width: 27px;
+          } //&::after
+        } //.dropdown-toggle
+      } //li (1st level)
+
+    } //ul (1st level)
+
+  } //.main-navigation
+  .main-navigation.toggled {
+    ul {
+      max-height: none;
+      padding-left: 0px;
+      text-align: center;
+    } //ul
+  } //.main-navigation.toggled
 
 
-
-
-
-
+} //breakpoint(50em)
 
 
 
@@ -244,3 +337,4 @@
     width: 50%;
   }
 }
+
