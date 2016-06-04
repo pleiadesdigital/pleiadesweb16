@@ -1085,7 +1085,7 @@ a:hover, a:active {
   }
   /* line 256, sass/navigation/_menus.scss */
   .main-navigation ul li ul {
-    outline: 1px solid #333333;
+    outline: 1px solid darkmagenta;
   }
   /* line 258, sass/navigation/_menus.scss */
   .main-navigation ul li ul li {
