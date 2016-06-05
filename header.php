@@ -63,17 +63,18 @@
 		</div><!-- .site-branding -->
 
 <!--		NAVIGATION-->
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'pleiadesweb16' ); ?></button>
-			<?php
-        wp_nav_menu(array(
-          'theme_location' => 'primary',
-          'menu_id' => 'primary-menu',
-          'menu_class'  => 'nav-menu'
-        ));
-      ?>
-		</nav><!-- #site-navigation -->
+    <button id="menu-toggle" class="menu-toggle"><?php _e('Menu', 'pleiadesweb16'); ?></button>
+    <div id="site-header-menu" class="site-header-menu">
 
+      <nav id="site-navigation" class="main-navigation" role="navigation">
+        <?php
+          wp_nav_menu(array(
+            'theme_location' => 'primary',
+            'menu_class' => 'primary-menu',
+          ));
+        ?>
+      </nav><!-- #site-navigation -->
+    </div><!--id="site-header-menu" class="site-header-menu"-->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

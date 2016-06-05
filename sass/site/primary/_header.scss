@@ -1,9 +1,9 @@
 .site-header {
-  background-color: rgb(15, 15, 15);
+  background-color: #FFFFFF;
   @include breakpoint(50em) {
     min-height: 4em;
   }
-  @include back-image($backimage1);
+  //@include back-image($backimage1);
   .site-logo {
     position: relative;
     a {
@@ -14,9 +14,9 @@
       display: block;
       width: 2.2em;
       height: 2.2em;
-      background: #000000;
+      background: #FFFFFF;
       border: 2px solid #FFFFFF;
-      color: #FFFFFF;
+      color: #000000;
       text-decoration: none;
       &:hover,
       &:focus {
@@ -40,7 +40,7 @@
       @include font-size(2.4);
       font-weight: 400;
       line-height: 1.3em;
-      color: #FFF;
+      color: #000000;
       text-transform: uppercase;
       word-break: break-word;
       @include breakpoint($iphone) {
@@ -65,7 +65,7 @@
       } //a
     } //.site-title
     .site-description {
-      color: #FFF;
+      color: lighten(#000000, 20);
       margin: 1em 1em 2em;
       font-weight: 300;
       @include font-size(1.3);
