@@ -722,7 +722,7 @@ a:hover, a:active {
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
-  margin: 0.875em 0;
+  margin: 0.875em 0px;
 }
 
 /* line 13, sass/navigation/_menus.scss */
@@ -1496,7 +1496,7 @@ a:hover, a:active {
     margin-right: auto;
     margin: 1.8em auto;
   }
-  /* line 12, ../../../../../../../usr/local/lib/ruby/gems/2.3.0/gems/susy-2.2.11/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../../../../usr/local/lib/ruby/gems/2.3.0/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
   .site-main:after {
     content: " ";
     display: block;
