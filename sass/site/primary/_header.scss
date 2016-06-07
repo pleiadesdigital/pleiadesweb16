@@ -1,8 +1,11 @@
 .site-header {
   background-color: #FFFFFF;
+  @include breakpoint($iphone) {
+    padding: 2.625em 7.6923%;
+  } //breakpoint($iphone)
   @include breakpoint(50em) {
     min-height: 4em;
-  }
+  } //breakpoint(50em)
   //@include back-image($backimage1);
   .site-logo {
     position: relative;

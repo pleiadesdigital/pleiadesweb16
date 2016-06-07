@@ -1,0 +1,89 @@
+
+//MENUS
+.site-header-menu {
+  display: none;
+@include flexbox((
+display: flex,
+flex-grow: 0,
+flex-shrink: 1,
+flex-basis: 100%
+));
+  margin: 0.875em 0px;
+.main-navigation {
+  font-family: $font__main;
+ul {
+  list-style: none;
+  margin: 0px;
+.toggled-on {
+  display: block;
+}
+li {
+  border-top: 1px solid #D1D1D1;
+  position: relative;
+a {
+  color: #1A1A1A;
+  display: block;
+  line-height: 1.3125;
+  outline-offset: -1px;
+  padding: 0.84375em 0px;
+&:hover,
+&:focus {
+   color: #007ACC;
+ } //&:hover, &:focus
+} //a(1st level)
+ul {
+  display: none;
+  margin-left: 0.875em;
+} //ul(2nd level)
+} //li(1st level)
+} //ul(1st level)
+.primary-menu {
+  border-bottom: 1px solid #D1D1D1;
+} //.primary-menu
+    .current-menu-item > a,
+    .current-menu-ancestor > a {
+      font-weight: 700;
+    } //.current-menu-item > a, .current-menu-ancestor > a
+.menu-item-has-children > a {
+          margin-right: 56px;
+        } //.menu-item-has-children > a
+} //.main-navigation
+} //.site-header-menu
+
+    .site-header-menu.toggled-on,
+    .no-js .site-header-menu {
+      display: block;
+    }
+.no-js .main-navigation {
+ul {
+ul {
+  display: block;
+} //ul
+} //ul
+} //.no-js .main-navigation
+
+
+
+      /* COMMENTS */
+
+    .comment-navigation,
+    .posts-navigation,
+    .post-navigation {
+
+.site-main & {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+
+.nav-previous {
+  float: left;
+  width: 50%;
+}
+
+.nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+}
+
