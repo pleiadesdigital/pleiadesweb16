@@ -44,7 +44,7 @@
 		</div><!-- .site-branding -->
 
 <!--		NAVIGATION-->
-    <button id="menu-toggle" class="menu-toggle"><?php _e('Menu', 'pleiadesweb16'); ?></button>
+    <button id="menu-toggle" class="menu-toggle"><?php _e('MENU', 'pleiadesweb16'); ?></button>
     <div id="site-header-menu" class="site-header-menu">
 
       <nav id="site-navigation" class="main-navigation" role="navigation">

@@ -7,6 +7,9 @@
   display: none;
   flex: 0 1 100%;
   margin: 0.875em 0;
+  @include breakpoint($zona1) {
+    margin: 1.3125em 0px;
+  }
   .main-navigation {
     font-family: $font__main;
     ul {
@@ -51,7 +54,7 @@
             border: 0px solid #D1D1D1;
             border-left-width: 1px;
             content: "\f078";
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 100;
             padding: 0px 10px;
             position: relative;
@@ -75,21 +78,19 @@
             }
           } //.toggled-on
         } //.dropdown-toggle
+        .toggled-on {
+          display: block;
+        }
         ul {
           display: none;
           margin-left: 0.875em;
         } //ul (2nd level)
-        .toggled-on {
-          display: block;
-        }
       } //li (1st level)
       &.primary-menu {
         border-bottom: 1px solid #D1D1D1;
-      }
+      } //&.primary-menu
     } //ul (1st level)
   } //.main-navigation
-
-
 
 } //.site-header-menu
 
@@ -101,9 +102,28 @@
   display: block;
 }
 
+//MEDIA QUERIES
+//zona2 (min-width 56.875em;) 910px
+@include breakpoint($zona2) {
+  .site-header-menu {
+    border: 2px dotted rebeccapurple;
+    display: block;
+    //flex: 0 1 auto;
+    .main-navigation {
+      margin: 0 -0875em;
+      .primary-menu,
+      .primary-menu > li {
+        //border: 0px;
+      } //.primary-menu (ul class), .primary-menu > li
+      .primary-menu > li {
+        //float: left;
+      } //.primary-menu (ul class)
+    } //.main-navigation
+  } //.site-header-menu
 
 
 
+} //breakpoint($zona2)
 
 
 

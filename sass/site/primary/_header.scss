@@ -77,4 +77,42 @@
       } //breakpoint($iphone)
     } //.site-description
   } //.site-branding
+  .menu-toggle {
+    background-color: transparent;
+    border: 1px solid #D1D1D1;
+    color: #1A1A1A;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 1.0769223077 0px;
+    padding: 0.769230769em;
+    @include breakpoint($zona1) {
+      font-size: 16px;
+      margin: 1.3125em 0;
+      padding: 0.8125em 0.875em 0.6875em;
+    } //breakpoint($zona1)
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: #007ACC;
+      color: #007ACC;
+    } //&:hover, &:focus
+    &.toggled-on {
+      &:hover,
+      &:focus {
+        background-color: #1A1A1A;
+        border-color: #1A1A1A;
+        color: #FFFFFF;
+      } //&:hover, &:focus
+      &:focus {
+        outline: thin dotted;
+      }
+    } //&.toggled-on
+    &:focus {
+      outline: 0;
+    }
+  } //.menu-toggle
 } //.site-header
+
+.no-js .menu-toggle {
+  display: none;
+}
