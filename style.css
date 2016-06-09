@@ -713,507 +713,143 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-/**
- * 6.2 - Menus
- */
-/* line 5, sass/navigation/_menus.scss */
+/*************************************/
+/*************************************/
+/* line 6, sass/navigation/_menus.scss */
 .site-header-menu {
   display: none;
-  -webkit-flex: 0 1 100%;
-  -ms-flex: 0 1 100%;
   flex: 0 1 100%;
-  margin: 0.875em 0px;
+  margin: 0.875em 0;
+}
+/* line 10, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation {
+  font-family: "Roboto", serif;
+}
+/* line 12, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul {
+  list-style: none;
+  margin: 0px;
+}
+/* line 15, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li {
+  border-top: 1px solid #D1D1D1;
+  position: relative;
+}
+/* line 18, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li a {
+  color: #1A1A1A;
+  display: block;
+  line-height: 1.3125;
+  outline-offset: -1px;
+  padding: 0.84375em 0px;
+}
+/* line 24, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li a:hover, .site-header-menu .main-navigation ul li a:focus {
+  color: #007ACC;
+}
+/* line 29, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li.current-menu-item > a, .site-header-menu .main-navigation ul li.current-menu-ancestor > a {
+  font-weight: 700;
+}
+/* line 33, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li.menu-item-has-children > a {
+  margin-right: 56px;
+}
+/* line 36, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li .dropdown-toggle {
+  background-color: transparent;
+  border: 0px;
+  border-radius: 0px;
+  font-family: 'Fontawesome';
+  color: #1A1A1A;
+  content: "";
+  height: 48px;
+  padding: 0px;
+  position: absolute;
+  right: 0px;
+  text-transform: none;
+  top: 0px;
+  width: 48px;
+}
+/* line 50, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li .dropdown-toggle:after {
+  border: 0px solid #D1D1D1;
+  border-left-width: 1px;
+  content: "\f078";
+  font-size: 16px;
+  font-weight: 100;
+  padding: 0px 10px;
+  position: relative;
+  width: 28px;
+}
+/* line 60, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li .dropdown-toggle:hover, .site-header-menu .main-navigation ul li .dropdown-toggle:focus {
+  background-color: transparent;
+  color: #007ACC;
+}
+/* line 65, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li .dropdown-toggle:focus {
+  outline: thin dotted;
+  outline-offset: -1px;
+}
+/* line 68, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li .dropdown-toggle:focus:after {
+  border-color: transparent;
+}
+/* line 73, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li .dropdown-toggle.toggled-on:after {
+  content: "\f077";
+}
+/* line 78, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li ul {
+  display: none;
+  margin-left: 0.875em;
+}
+/* line 82, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul li .toggled-on {
+  display: block;
+}
+/* line 86, sass/navigation/_menus.scss */
+.site-header-menu .main-navigation ul.primary-menu {
+  border-bottom: 1px solid #D1D1D1;
 }
 
-/* line 13, sass/navigation/_menus.scss */
+/* line 96, sass/navigation/_menus.scss */
 .site-header-menu.toggled-on,
 .no-js .site-header-menu {
   display: block;
 }
 
-/* line 18, sass/navigation/_menus.scss */
-.main-navigation {
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
-}
-
-/* line 22, sass/navigation/_menus.scss */
-.site-footer .main-navigation {
-  margin-bottom: 1.75em;
-}
-
-/* line 26, sass/navigation/_menus.scss */
-.main-navigation ul {
-  list-style: none;
-  margin: 0;
-}
-
-/* line 31, sass/navigation/_menus.scss */
-.main-navigation li {
-  border-top: 1px solid #d1d1d1;
-  position: relative;
-}
-
-/* line 36, sass/navigation/_menus.scss */
-.main-navigation a {
-  color: #1a1a1a;
-  display: block;
-  line-height: 1.3125;
-  outline-offset: -1px;
-  padding: 0.84375em 0;
-}
-
-/* line 44, sass/navigation/_menus.scss */
-.main-navigation a:hover,
-.main-navigation a:focus {
-  color: #007acc;
-}
-
-/* line 49, sass/navigation/_menus.scss */
-.main-navigation .current-menu-item > a,
-.main-navigation .current-menu-ancestor > a {
-  font-weight: 700;
-}
-
-/* line 54, sass/navigation/_menus.scss */
-.main-navigation ul ul {
-  display: none;
-  margin-left: 0.875em;
-}
-
-/* line 59, sass/navigation/_menus.scss */
+/* line 100, sass/navigation/_menus.scss */
 .no-js .main-navigation ul ul {
   display: block;
 }
 
-/* line 63, sass/navigation/_menus.scss */
-.main-navigation ul .toggled-on {
-  display: block;
+/*************************************/
+/*************************************/
+/* line 119, sass/navigation/_menus.scss */
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden;
 }
-
-/* line 67, sass/navigation/_menus.scss */
-.main-navigation .primary-menu {
-  border-bottom: 1px solid #d1d1d1;
-}
-
-/* line 71, sass/navigation/_menus.scss */
-.main-navigation .menu-item-has-children > a {
-  margin-right: 56px;
-}
-
-/* line 75, sass/navigation/_menus.scss */
-.dropdown-toggle {
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  color: #1a1a1a;
-  content: "";
-  height: 48px;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  text-transform: none;
-  top: 0;
-  width: 48px;
-}
-
-/* line 90, sass/navigation/_menus.scss */
-.dropdown-toggle:after {
-  border: 0 solid #d1d1d1;
-  border-left-width: 1px;
-  font-family: 'Fontawesome';
-  content: "\f078";
-  font-size: 18px;
-  left: 1px;
-  position: relative;
-  width: 48px;
-}
-
-/* line 101, sass/navigation/_menus.scss */
-.dropdown-toggle:hover,
-.dropdown-toggle:focus {
-  background-color: transparent;
-  color: #007acc;
-}
-
-/* line 107, sass/navigation/_menus.scss */
-.dropdown-toggle:focus {
-  outline: thin dotted;
-  outline-offset: -1px;
-}
-
-/* line 112, sass/navigation/_menus.scss */
-.dropdown-toggle:focus:after {
-  border-color: transparent;
-}
-
-/* line 116, sass/navigation/_menus.scss */
-.dropdown-toggle.toggled-on:after {
-  font-family: 'Fontawesome';
-  content: "\f077";
-}
-
-/* line 121, sass/navigation/_menus.scss */
-.site-header .main-navigation + .social-navigation {
-  margin-top: 1.75em;
-}
-
-/* line 125, sass/navigation/_menus.scss */
-.site-footer .social-navigation {
-  margin-bottom: 1.75em;
-}
-
-/* line 129, sass/navigation/_menus.scss */
-.social-navigation ul {
-  list-style: none;
-  margin: 0 0 -0.4375em;
-}
-
-/* line 134, sass/navigation/_menus.scss */
-.social-navigation li {
+/* line 124, sass/navigation/_menus.scss */
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
   float: left;
-  margin: 0 0.4375em 0.4375em 0;
+  width: 50%;
+}
+/* line 129, sass/navigation/_menus.scss */
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
 }
 
-/* line 139, sass/navigation/_menus.scss */
-.social-navigation a {
-  border: 1px solid #d1d1d1;
-  border-radius: 50%;
-  color: #1a1a1a;
-  display: block;
-  height: 35px;
-  position: relative;
-  width: 35px;
-}
-
-/* line 149, sass/navigation/_menus.scss */
-.social-navigation a:before {
-  font-family: 'Fontawesome';
-  content: "\f077";
-  height: 33px;
-  line-height: 33px;
-  text-align: center;
-  width: 33px;
-}
-
-/* line 158, sass/navigation/_menus.scss */
-.social-navigation a:hover:before,
-.social-navigation a:focus:before {
-  color: #007acc;
-}
-
-/* line 163, sass/navigation/_menus.scss */
-.social-navigation a[href*="codepen.io"]:before {
-  content: "\f216";
-}
-
-/* line 167, sass/navigation/_menus.scss */
-.social-navigation a[href*="digg.com"]:before {
-  content: "\f221";
-}
-
-/* line 171, sass/navigation/_menus.scss */
-.social-navigation a[href*="dribbble.com"]:before {
-  content: "\f201";
-}
-
-/* line 175, sass/navigation/_menus.scss */
-.social-navigation a[href*="dropbox.com"]:before {
-  content: "\f225";
-}
-
-/* line 179, sass/navigation/_menus.scss */
-.social-navigation a[href*="facebook.com"]:before {
-  content: "\f203";
-}
-
-/* line 183, sass/navigation/_menus.scss */
-.social-navigation a[href*="flickr.com"]:before {
-  content: "\f211";
-}
-
-/* line 187, sass/navigation/_menus.scss */
-.social-navigation a[href*="foursquare.com"]:before {
-  content: "\f226";
-}
-
-/* line 191, sass/navigation/_menus.scss */
-.social-navigation a[href*="plus.google.com"]:before {
-  content: "\f206";
-}
-
-/* line 195, sass/navigation/_menus.scss */
-.social-navigation a[href*="github.com"]:before {
-  content: "\f200";
-}
-
-/* line 199, sass/navigation/_menus.scss */
-.social-navigation a[href*="instagram.com"]:before {
-  content: "\f215";
-}
-
-/* line 203, sass/navigation/_menus.scss */
-.social-navigation a[href*="linkedin.com"]:before {
-  content: "\f208";
-}
-
-/* line 207, sass/navigation/_menus.scss */
-.social-navigation a[href*="path.com"]:before {
-  content: "\f219";
-}
-
-/* line 211, sass/navigation/_menus.scss */
-.social-navigation a[href*="pinterest.com"]:before {
-  content: "\f210";
-}
-
-/* line 215, sass/navigation/_menus.scss */
-.social-navigation a[href*="getpocket.com"]:before {
-  content: "\f224";
-}
-
-/* line 219, sass/navigation/_menus.scss */
-.social-navigation a[href*="polldaddy.com"]:before {
-  content: "\f217";
-}
-
-/* line 223, sass/navigation/_menus.scss */
-.social-navigation a[href*="reddit.com"]:before {
-  content: "\f222";
-}
-
-/* line 227, sass/navigation/_menus.scss */
-.social-navigation a[href*="skype.com"]:before {
-  content: "\f220";
-}
-
-/* line 231, sass/navigation/_menus.scss */
-.social-navigation a[href*="stumbleupon.com"]:before {
-  content: "\f223";
-}
-
-/* line 235, sass/navigation/_menus.scss */
-.social-navigation a[href*="tumblr.com"]:before {
-  content: "\f214";
-}
-
-/* line 239, sass/navigation/_menus.scss */
-.social-navigation a[href*="twitter.com"]:before {
-  content: "\f202";
-}
-
-/* line 243, sass/navigation/_menus.scss */
-.social-navigation a[href*="vimeo.com"]:before {
-  content: "\f212";
-}
-
-/* line 247, sass/navigation/_menus.scss */
-.social-navigation a[href*="wordpress.com"]:before,
-.social-navigation a[href*="wordpress.org"]:before {
-  content: "\f205";
-}
-
-/* line 252, sass/navigation/_menus.scss */
-.social-navigation a[href*="youtube.com"]:before {
-  content: "\f213";
-}
-
-/* line 256, sass/navigation/_menus.scss */
-.social-navigation a[href^="mailto:"]:before {
-  content: "\f410";
-}
-
-/* line 260, sass/navigation/_menus.scss */
-.social-navigation a[href*="spotify.com"]:before {
-  content: "\f515";
-}
-
-/* line 264, sass/navigation/_menus.scss */
-.social-navigation a[href*="twitch.tv"]:before {
-  content: "\f516";
-}
-
-/* line 268, sass/navigation/_menus.scss */
-.social-navigation a[href$="/feed/"]:before {
-  content: "\f413";
-}
-
-@media (min-width: 710px) {
-  /* line 275, sass/navigation/_menus.scss */
-  .menu-toggle {
-    font-size: 16px;
-    margin: 1.3125em 0;
-    padding: 0.8125em 0.875em 0.6875em;
-  }
-}
-@media (min-width: 56.875em) {
-  /* line 284, sass/navigation/_menus.scss */
-  .site-header {
-    padding-right: 4.5455%;
-    padding-left: 4.5455%;
-  }
-
-  /* line 289, sass/navigation/_menus.scss */
-  .site-header-main {
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-  }
-
-  /* line 295, sass/navigation/_menus.scss */
-  .wp-custom-logo .site-header-main {
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  /* line 301, sass/navigation/_menus.scss */
-  .site-header-menu {
-    display: block;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-  }
-
-  /* line 308, sass/navigation/_menus.scss */
-  .main-navigation {
-    margin: 0 -0.875em;
-  }
-
-  /* line 312, sass/navigation/_menus.scss */
-  .main-navigation .primary-menu,
-  .main-navigation .primary-menu > li {
-    border: 0;
-  }
-
-  /* line 317, sass/navigation/_menus.scss */
-  .main-navigation .primary-menu > li {
-    float: left;
-  }
-
-  /* line 321, sass/navigation/_menus.scss */
-  .main-navigation a {
-    outline-offset: -8px;
-    padding: 0.65625em 0.875em;
-    white-space: nowrap;
-  }
-
-  /* line 327, sass/navigation/_menus.scss */
-  .main-navigation li:hover > a,
-  .main-navigation li.focus > a {
-    color: #007acc;
-  }
-
-  /* line 332, sass/navigation/_menus.scss */
-  .main-navigation ul ul {
-    border-bottom: 1px solid #d1d1d1;
-    display: block;
-    left: -999em;
-    margin: 0;
-    position: absolute;
-    z-index: 99999;
-  }
-
-  /* line 341, sass/navigation/_menus.scss */
-  .main-navigation ul ul ul {
-    top: -1px;
-  }
-
-  /* line 345, sass/navigation/_menus.scss */
-  .main-navigation ul ul ul:before,
-  .main-navigation ul ul ul:after {
-    border: 0;
-  }
-
-  /* line 350, sass/navigation/_menus.scss */
-  .main-navigation ul ul li {
-    background-color: #fff;
-    border: 1px solid #d1d1d1;
-    border-bottom-width: 0;
-  }
-
-  /* line 356, sass/navigation/_menus.scss */
-  .main-navigation ul ul a {
-    white-space: normal;
-    width: 12.6875em;
-  }
-
-  /* line 361, sass/navigation/_menus.scss */
-  .main-navigation ul ul:before,
-  .main-navigation ul ul:after {
-    border-style: solid;
-    content: "";
-    position: absolute;
-  }
-
-  /* line 368, sass/navigation/_menus.scss */
-  .main-navigation ul ul:before {
-    border-color: #d1d1d1 transparent;
-    border-width: 0px 10px 10px 10px;
-    right: 9px;
-    top: -9px;
-  }
-
-  /* line 376, sass/navigation/_menus.scss */
-  .main-navigation ul ul:after {
-    border-color: #fff transparent;
-    border-width: 0px 8px 8px 8px;
-    right: 11px;
-    top: -7px;
-  }
-
-  /* line 383, sass/navigation/_menus.scss */
-  .main-navigation li:hover > ul,
-  .main-navigation li.focus > ul {
-    left: auto;
-    right: 0;
-  }
-
-  /* line 389, sass/navigation/_menus.scss */
-  .main-navigation ul ul li:hover > ul,
-  .main-navigation ul ul li.focus > ul {
-    left: auto;
-    right: 100%;
-  }
-
-  /* line 395, sass/navigation/_menus.scss */
-  .main-navigation .menu-item-has-children > a {
-    margin: 0;
-    padding-right: 2.25em;
-  }
-
-  /* line 400, sass/navigation/_menus.scss */
-  .main-navigation .menu-item-has-children > a:after {
-    font-family: 'Fontawesome';
-    content: "\f078";
-    position: absolute;
-    right: 0.625em;
-    top: 0.8125em;
-  }
-
-  /* line 408, sass/navigation/_menus.scss */
-  .main-navigation ul ul .menu-item-has-children > a {
-    padding-right: 2.0625em;
-  }
-
-  /* line 412, sass/navigation/_menus.scss */
-  .main-navigation ul ul .menu-item-has-children > a:after {
-    right: 0.5625em;
-    top: 0.875em;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-
-  /* line 421, sass/navigation/_menus.scss */
-  .dropdown-toggle,
-  .main-navigation ul .dropdown-toggle.toggled-on,
-  .menu-toggle,
-  .site-header .social-navigation,
-  .site-footer .main-navigation {
-    display: none;
-  }
-}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1496,7 +1132,7 @@ a:hover, a:active {
     margin-right: auto;
     margin: 1.8em auto;
   }
-  /* line 12, ../../../../../../../usr/local/lib/ruby/gems/2.3.0/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../../../../usr/local/lib/ruby/gems/2.3.0/gems/susy-2.2.11/sass/susy/output/support/_clearfix.scss */
   .site-main:after {
     content: " ";
     display: block;
