@@ -36,51 +36,54 @@
         &.menu-item-has-children > a {
           margin-right: 56px;
         } //&.menu-item-has-children > a
-        .dropdown-toggle {
-          background-color: transparent;
-          border: 0px;
-          border-radius: 0px;
-          font-family: 'Fontawesome';
-          color: #1A1A1A;
-          content: "";
-          height: 48px;
-          padding: 0px;
-          position: absolute;
-          right: 0px;
-          text-transform: none;
-          top: 0px;
-          width: 48px;
-          &:after {
-            border: 0px solid #D1D1D1;
-            border-left-width: 1px;
-            content: "\f078";
-            font-size: 15px;
-            font-weight: 100;
-            padding: 0px 10px;
-            position: relative;
-            width: 28px;
-          } //&:after
-          &:hover,
-          &:focus {
+        @include breakpoint($zona1) {
+          .dropdown-toggle {
             background-color: transparent;
-            color: #007ACC;
-          } //&:hover, &:focus
-          &:focus {
-            outline: thin dotted;
-            outline-offset: -1px;
+            border: 0px;
+            border-radius: 0px;
+            font-family: 'Fontawesome';
+            color: #1A1A1A;
+            content: "";
+            height: 48px;
+            padding: 0px;
+            position: absolute;
+            right: 0px;
+            text-transform: none;
+            top: 0px;
+            width: 48px;
             &:after {
-              border-color: transparent;
+              border: 0px solid #D1D1D1;
+              border-left-width: 1px;
+              content: "\f078";
+              font-size: 15px;
+              font-weight: 100;
+              padding: 0px 10px;
+              position: relative;
+              width: 28px;
             } //&:after
-          } //&:focus
-          &.toggled-on {
-            &:after {
-              content: "\f077";
-            }
-          } //.toggled-on
-        } //.dropdown-toggle
-        .toggled-on {
-          display: block;
-        }
+            &:hover,
+            &:focus {
+              background-color: transparent;
+              color: #007ACC;
+            } //&:hover, &:focus
+            &:focus {
+              outline: thin dotted;
+              outline-offset: -1px;
+              &:after {
+                border-color: transparent;
+              } //&:after
+            } //&:focus
+            &.toggled-on {
+              &:after {
+                content: "\f077";
+              } //&:after
+            } //.toggled-on
+          } //.dropdown-toggle
+          .toggled-on {
+            display: block;
+          }
+        } //breakpoint($zona1)
+
         ul {
           display: none;
           margin-left: 0.875em;
@@ -106,25 +109,111 @@
 //zona2 (min-width 56.875em;) 910px
 @include breakpoint($zona2) {
   .site-header-menu {
-    border: 2px dotted rebeccapurple;
     display: block;
-    //flex: 0 1 auto;
+    flex: 0 1 auto;
     .main-navigation {
-      margin: 0 -0875em;
+      //margin: 0px -0.875em;
       .primary-menu,
       .primary-menu > li {
-        //border: 0px;
+        border: 0px;
       } //.primary-menu (ul class), .primary-menu > li
       .primary-menu > li {
-        //float: left;
+        float: left;
       } //.primary-menu (ul class)
+      ul {
+        li {
+          &:hover > a,
+          &.focus > a {
+            color: #007ACC;
+          }
+          a {
+            outline-offset: -8px;
+            padding: 0.65625em 0.875em;
+            white-space: nowrap;
+          } //a(1st level)
+          &:hover > ul,
+          &.focus > ul {
+            left: auto;
+            right: 0px;
+          } //&:hover > ul, &.focus > ul
+          &.menu-item-has-children > a {
+            margin: 0px;
+            padding-right: 2.25em;
+            &:after {
+              font-family: 'Fontawesome';
+              content: "\f078";
+              position: absolute;
+              right: 0.625em;
+              top: 0.8125em;
+            } //&:after
+          } //&.menu-item-has-children > a
+          ul {
+            border-bottom: 1px solid #D1D1D1;
+            display: block;
+            left: -999em;
+            margin: 0px;
+            position: absolute;
+            z-index: 99999;
+            &:before,
+            &:after {
+              border-style: solid;
+              content: "";
+              position: absolute;
+            } //&:before, &:after
+            &:before {
+              border-color: #D1D1D1 transparent;
+              border-width: 0px 10px 10px;
+              right: 9px;
+              top: -9px;
+            }
+            &:after {
+              border-color: #FFFFFF transparent;
+              border-width: 0px 8px 8px;
+              right: 11px;
+              top: -7px;
+            }
+            li {
+              background-color: #FFFFFF;
+              border: 1px solid #D1D1D1;
+              border-bottom-width: 0px;
+              a {
+                white-space: normal;
+                width: 12.6875em;
+              } //a(2nd level)
+              &:hover > ul,
+              &.focus > ul {
+                right: auto;
+                left: 100%;
+              } //&:hover > ul, &.focus > ul
+              &.menu-item-has-children > a {
+                padding-right: 2.0625em;
+                &:after {
+                  right: 0.5625em;
+                  top: 0.875em;
+                  transform: rotate(270deg);
+                } //&:after
+              } //&.menu-item-has-children > a
+              ul {
+                top: -1px;
+                &:before,
+                &:after {
+                  border: 0px;
+                } //&:before, &:after
+              } //ul(3rd level)
+            } //li(2nd level)
+          } //ul(2nd level)
+        } //li(1st level)
+      } //ul(1st level)
     } //.main-navigation
   } //.site-header-menu
 
-
+  .dropdown-toggle,
+  .main-navigation ul .dropdown-toggle.toggled-on,
+  .menu-toggle {
+    display: none;
+  }
 
 } //breakpoint($zona2)
-
 
 
 /*************************************/
