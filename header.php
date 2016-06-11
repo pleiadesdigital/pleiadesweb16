@@ -23,9 +23,18 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'pleiadesweb16' ); ?></a>
-  <header id="masthead" class="site-header" role="banner">
-
-
+    <header id="masthead" class="site-header" role="banner">
+      <div class="site-logo">
+        <?php $site_title = get_bloginfo('name'); ?>
+        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+          <div class="screen-reader-text">
+            <?php printf(esc_html__('Go to the home page of %1$s', 'pleiadesweb16')); ?>
+          </div>
+          <div class="site-firstletter" aria-hidden="true">
+            <?php echo substr($site_title, 0, 1); ?>
+          </div><!--class="site-firstletter"-->
+        </a><!--class="site-logo"-->
+      </div>
 <!--		BRANDING-->
 		<div class="site-branding<?php if(is_singular()) { echo ' screen-reader-text'; } ?>">
 			<?php

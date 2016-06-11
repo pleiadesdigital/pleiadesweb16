@@ -1079,7 +1079,11 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 /* line 1, sass/site/primary/_header.scss */
 .site-header {
-  background-color: rgba(130, 130, 130, 0.8);
+  background: rgba(0, 0, 0, 0.7) url("http://localhost/~ronyortiz/pleiadesweb16/wp-content/themes/pleiadesweb16/images/misc/pleiades-digital-online-marketing-agency.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 /* line 3, sass/site/primary/_header.scss */
 .site-header .site-branding {

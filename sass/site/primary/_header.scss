@@ -1,5 +1,5 @@
 .site-header {
-  background-color: rgba(130, 130, 130, 0.8);
+  @include back-image($backimage1);
   .site-branding {
     text-align: center;
     .site-title {
