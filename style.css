@@ -1079,101 +1079,57 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 /* line 1, sass/site/primary/_header.scss */
 .site-header {
-  background-color: #FFFFFF;
+  background-color: rgba(130, 130, 130, 0.8);
 }
-@media (max-width: 699px) {
-  /* line 1, sass/site/primary/_header.scss */
-  .site-header {
-    padding: 2.625em 7.6923%;
-  }
-}
-/* line 10, sass/site/primary/_header.scss */
-.site-header .site-logo {
-  position: relative;
-}
-/* line 12, sass/site/primary/_header.scss */
-.site-header .site-logo a {
-  position: absolute;
-  z-index: 10;
-  top: 1em;
-  left: 1em;
-  display: block;
-  width: 2.2em;
-  height: 2.2em;
-  background: #FFFFFF;
-  border: 2px solid #FFFFFF;
-  color: #000000;
-  text-decoration: none;
-}
-/* line 24, sass/site/primary/_header.scss */
-.site-header .site-logo a:hover, .site-header .site-logo a:focus {
-  outline: 2px solid #FFFFFF;
-}
-/* line 28, sass/site/primary/_header.scss */
-.site-header .site-logo a .site-firstletter {
-  font-family: "Merriweather", serif;
-  font-size: 1.5em;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1.3em;
-}
-/* line 38, sass/site/primary/_header.scss */
+/* line 3, sass/site/primary/_header.scss */
 .site-header .site-branding {
   text-align: center;
 }
-/* line 40, sass/site/primary/_header.scss */
+/* line 5, sass/site/primary/_header.scss */
 .site-header .site-branding .site-title {
-  margin: 1.7em 1em 0px;
+  margin: 0px;
   font-family: "Roboto", serif;
-  font-size: 38.4px;
-  font-size: 2.4rem;
-  font-weight: 400;
-  line-height: 1.3em;
-  color: #000000;
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 300;
   text-transform: uppercase;
+  line-height: 1.8;
   word-break: break-word;
 }
-@media (max-width: 699px) {
-  /* line 40, sass/site/primary/_header.scss */
+/* line 13, sass/site/primary/_header.scss */
+.site-header .site-branding .site-title::after {
+  display: block;
+  content: "";
+  margin: 0px auto 0.5em;
+  width: 3em;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.7);
+  opacity: 0.8;
+}
+@media (max-width: 30em) {
+  /* line 5, sass/site/primary/_header.scss */
   .site-header .site-branding .site-title {
-    font-size: 28.8px;
-    font-size: 1.8rem;
+    font-size: 25.6px;
+    font-size: 1.6rem;
   }
 }
-/* line 52, sass/site/primary/_header.scss */
+/* line 24, sass/site/primary/_header.scss */
 .site-header .site-branding .site-title a {
   text-decoration: none;
   color: inherit;
 }
-/* line 56, sass/site/primary/_header.scss */
+/* line 27, sass/site/primary/_header.scss */
 .site-header .site-branding .site-title a:hover, .site-header .site-branding .site-title a:focus {
-  text-decoration: underline;
+  color: inherit;
 }
-/* line 60, sass/site/primary/_header.scss */
-.site-header .site-branding .site-title a::after {
-  display: block;
-  content: "";
-  margin: 0.7em auto 0px;
-  width: 3em;
-  border-bottom: 1px solid #FFF;
-  opacity: 0.5;
-}
-/* line 70, sass/site/primary/_header.scss */
+/* line 33, sass/site/primary/_header.scss */
 .site-header .site-branding .site-description {
-  color: #333333;
-  margin: 1em 1em 2em;
-  font-weight: 300;
-  font-size: 20.8px;
-  font-size: 1.3rem;
+  margin: 0px;
+  line-height: 1;
+  word-break: break-word;
+  font-size: 17.6px;
+  font-size: 1.1rem;
 }
-@media (max-width: 699px) {
-  /* line 70, sass/site/primary/_header.scss */
-  .site-header .site-branding .site-description {
-    font-size: 17.6px;
-    font-size: 1.1rem;
-  }
-}
-/* line 80, sass/site/primary/_header.scss */
+/* line 43, sass/site/primary/_header.scss */
 .site-header .menu-toggle {
   background-color: transparent;
   border: 1px solid #D1D1D1;
@@ -1184,35 +1140,35 @@ a:hover, a:active {
   padding: 0.769230769em;
 }
 @media (max-width: 800px) {
-  /* line 80, sass/site/primary/_header.scss */
+  /* line 43, sass/site/primary/_header.scss */
   .site-header .menu-toggle {
     font-size: 16px;
     margin: 1.3125em 0;
     padding: 0.8125em 0.875em 0.6875em;
   }
 }
-/* line 93, sass/site/primary/_header.scss */
+/* line 56, sass/site/primary/_header.scss */
 .site-header .menu-toggle:hover, .site-header .menu-toggle:focus {
   background-color: transparent;
   border-color: #007ACC;
   color: #007ACC;
 }
-/* line 100, sass/site/primary/_header.scss */
+/* line 63, sass/site/primary/_header.scss */
 .site-header .menu-toggle.toggled-on:hover, .site-header .menu-toggle.toggled-on:focus {
   background-color: #1A1A1A;
   border-color: #1A1A1A;
   color: #FFFFFF;
 }
-/* line 106, sass/site/primary/_header.scss */
+/* line 69, sass/site/primary/_header.scss */
 .site-header .menu-toggle.toggled-on:focus {
   outline: thin dotted;
 }
-/* line 110, sass/site/primary/_header.scss */
+/* line 73, sass/site/primary/_header.scss */
 .site-header .menu-toggle:focus {
   outline: 0;
 }
 
-/* line 116, sass/site/primary/_header.scss */
+/* line 79, sass/site/primary/_header.scss */
 .no-js .menu-toggle {
   display: none;
 }
