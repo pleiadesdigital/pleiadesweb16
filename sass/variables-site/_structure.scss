@@ -11,13 +11,14 @@ $susy: (
 
 //Breakpoint media queries
 $desktop: 40em;
+$desktop_large: 57em;
 
 //$desktop: 1200px;
 $laptop: 990px 1199px;
 $tablet: 700px 989px;
 $iphone: max-width 699px;
 
-$zona1: max-width 40em;
-$zona2: min-width 40.1em;
+$zona1: max-width 800px;
+$zona2: min-width 801px;
 $zona3: min-width 61.5625em;
 $zona4: min-width 75em;

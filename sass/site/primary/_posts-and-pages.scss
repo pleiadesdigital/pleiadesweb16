@@ -28,15 +28,15 @@
 }
 
 // GLOBAL
+
 .site-main {
-  border: 1px dashed darkmagenta;
-	margin: 1.4em;
-  overflow: hidden;
-  @include breakpoint(30em) {
+  margin: 1.4em;
+  @include breakpoint($desktop) {
     margin: 1.8em;
   }
-  @include breakpoint(57em) {
-    @include container (45em);
+  @include breakpoint($desktop_large) {
+    border: 2px dotted aquamarine;
+    max-width: 45em;
     margin: 1.8em auto;
   }
   @include font-size(0.9);

@@ -369,7 +369,7 @@ button,
 input,
 select,
 textarea {
-  color: #191919;
+  color: black;
   font-family: "Roboto", serif;
   font-size: 16px;
   font-size: 1rem;
@@ -711,7 +711,7 @@ a:hover, a:active {
   flex: 0 1 100%;
   margin: 0.875em 0;
 }
-@media (max-width: 40em) {
+@media (max-width: 800px) {
   /* line 6, sass/navigation/_menus.scss */
   .site-header-menu {
     margin: 1.3125em 0px;
@@ -751,7 +751,7 @@ a:hover, a:active {
 .site-header-menu .main-navigation ul li.menu-item-has-children > a {
   margin-right: 56px;
 }
-@media (max-width: 40em) {
+@media (max-width: 800px) {
   /* line 40, sass/navigation/_menus.scss */
   .site-header-menu .main-navigation ul li .dropdown-toggle {
     background-color: transparent;
@@ -823,7 +823,7 @@ a:hover, a:active {
   display: block;
 }
 
-@media (min-width: 40.1em) {
+@media (min-width: 801px) {
   /* line 111, sass/navigation/_menus.scss */
   .site-header-menu {
     display: block;
@@ -1087,12 +1087,6 @@ a:hover, a:active {
     padding: 2.625em 7.6923%;
   }
 }
-@media (min-width: 50em) {
-  /* line 1, sass/site/primary/_header.scss */
-  .site-header {
-    min-height: 4em;
-  }
-}
 /* line 10, sass/site/primary/_header.scss */
 .site-header .site-logo {
   position: relative;
@@ -1189,7 +1183,7 @@ a:hover, a:active {
   margin: 1.0769223077 0px;
   padding: 0.769230769em;
 }
-@media (max-width: 40em) {
+@media (max-width: 800px) {
   /* line 80, sass/site/primary/_header.scss */
   .site-header .menu-toggle {
     font-size: 16px;
@@ -1264,38 +1258,29 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
-/* line 31, sass/site/primary/_posts-and-pages.scss */
+/* line 32, sass/site/primary/_posts-and-pages.scss */
 .site-main {
-  border: 1px dashed darkmagenta;
   margin: 1.4em;
-  overflow: hidden;
   font-size: 14.4px;
   font-size: 0.9rem;
   line-height: 1.6em;
 }
-@media (min-width: 30em) {
-  /* line 31, sass/site/primary/_posts-and-pages.scss */
+@media (min-width: 40em) {
+  /* line 32, sass/site/primary/_posts-and-pages.scss */
   .site-main {
     margin: 1.8em;
   }
 }
 @media (min-width: 57em) {
-  /* line 31, sass/site/primary/_posts-and-pages.scss */
+  /* line 32, sass/site/primary/_posts-and-pages.scss */
   .site-main {
+    border: 2px dotted aquamarine;
     max-width: 45em;
-    margin-left: auto;
-    margin-right: auto;
     margin: 1.8em auto;
-  }
-  /* line 12, ../../../../../../../usr/local/lib/ruby/gems/2.3.0/gems/susy-2.2.9/sass/susy/output/support/_clearfix.scss */
-  .site-main:after {
-    content: " ";
-    display: block;
-    clear: both;
   }
 }
 @media (min-width: 40em) {
-  /* line 31, sass/site/primary/_posts-and-pages.scss */
+  /* line 32, sass/site/primary/_posts-and-pages.scss */
   .site-main {
     font-size: 18px;
     font-size: 1.125rem;

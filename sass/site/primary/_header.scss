@@ -4,7 +4,7 @@
     padding: 2.625em 7.6923%;
   } //breakpoint($iphone)
   @include breakpoint(50em) {
-    min-height: 4em;
+    //min-height: 4em;
   } //breakpoint(50em)
   //@include back-image($backimage1);
   .site-logo {
