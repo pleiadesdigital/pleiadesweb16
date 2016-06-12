@@ -1,5 +1,41 @@
 .site-header {
   @include back-image($backimage1);
+  // SITE LOGO
+  .site-logo {
+    position: relative;
+    a {
+      position: absolute;
+      z-index: 10;
+      top: 5px;
+      left: 5px;
+      display: block;
+      width: 2em;
+      height: 2em;
+      background: #000000;
+      border: 2px solid #FFFFFF;
+      color: #FFFFFF;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        outline: 2px solid #FFFFFF;
+      } //&:hover, &:focus
+      &:hover .site-firstletter,
+      &:focus .site-firstletter {
+        background: #FFFFFF;
+        color: #000000;
+        font-weight: 500;
+      }
+      .site-firstletter {
+        font-family: $font__main;
+        font-size: 1.5em;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.3em;
+      }
+    } //a
+  } //.site-logo
+
+  //SITE BRANDING
   .site-branding {
     text-align: center;
     .site-title {
@@ -8,12 +44,12 @@
       @include font-size(2);
       font-weight: 300;
       text-transform: uppercase;
-      line-height: 1.8;
+      line-height: 1.5;
       word-break: break-word;
       &::after {
         display: block;
         content: "";
-        margin: 0px auto 0.5em;
+        margin: 0px auto;
         width: 3em;
         border-bottom: 1px solid rgba(50, 50, 50, 0.7);
         opacity: 0.8;
@@ -32,7 +68,7 @@
     } //.site-title
     .site-description {
       margin: 0px;
-      line-height: 1;
+      line-height: 1.5;
       word-break: break-word;
       @include font-size(1.1);
     } //.site-description
