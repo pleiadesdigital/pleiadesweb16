@@ -125,7 +125,8 @@
     display: block;
     flex: 0 1 auto;
     .main-navigation {
-      //margin: 0px -0.875em;
+      margin: 0.5em auto 0px;
+      @include clearfix();
       .primary-menu,
       .primary-menu > li {
         border: 0px;

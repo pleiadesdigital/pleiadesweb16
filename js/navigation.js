@@ -113,25 +113,25 @@
     }
   });
 
-  // Hide show toggle button on scroll
+/*  // Hide show toggle button on scroll
 
   var position, direction, previous;
   $(window).scroll(function(){
     if ($(this).scrollTop() >= position) {
-      direction = 'up';
+      direction = 'down';
       if (direction !== previous) {
         $('.menu-toggle').addClass('hide');
         previous = direction;
       } //if (direction !== previous)
     } else {
-      direction = 'down';
+      direction = 'up';
       if (direction !== previous) {
         $('.menu-toggle').removeClass('hide');
         previous = direction;
       } //if (direction !== previous)
     }//if ($(this).scrollTop() >= position)
     position = $(this).scrollTop();
-  }); //(window).scroll(function()
+  }); //(window).scroll(function()*/
 
 
 

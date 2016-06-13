@@ -15,8 +15,8 @@
     a {
       position: absolute;
       z-index: 10;
-      top: 5px;
-      left: 5px;
+      top: 0.5em;
+      left: 0.5em;
       display: block;
       width: 2em;
       height: 2em;
@@ -47,6 +47,7 @@
   //SITE BRANDING
   .site-branding {
     text-align: center;
+    overflow: hidden;
     .site-title {
       margin: 0px;
       font-family: $font__main;
@@ -96,6 +97,8 @@
     font-weight: 400;
     margin: 1.0769223077em 0px;
     padding: 0.769230769em;
+    @include single-transition();
+    @include transition-duration(0.4s);
     @include breakpoint($zona1) {
       font-size: 16px;
       margin: 0px;
@@ -126,11 +129,16 @@
         color: #FFFFFF;
       } //&:hover, &:focus
       &:focus {
-
+      }
+      &.hide {
+        top: 0.5em;
       }
     } //&.toggled-on
     &:focus {
       outline: 0;
+    }
+    &.hide {
+      top: -3.5em;
     }
   } //.menu-toggle
 } //.site-header
