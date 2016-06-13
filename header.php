@@ -43,7 +43,7 @@
       <!--		SITE BRANDING-->
       <div class="site-branding<?php if(is_singular()) { echo ' screen-reader-text'; } ?>">
         <?php
-        if ( is_front_page() && is_home() ) : ?>
+        if (is_front_page() && is_home()): ?>
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
         <?php else : ?>
           <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
@@ -60,7 +60,7 @@
 
 <!--		NAVIGATION-->
     <button id="menu-toggle" class="menu-toggle"><?php _e('MENU', 'pleiadesweb16'); ?></button>
-    <div id="site-header-menu" class="site-header-menu">
+    <div id="site-header-menu" class="site-header-menu <?php if (is_front_page() && is_home()) { echo 'site-header-menu-home';} ?>">
 
       <nav id="site-navigation" class="main-navigation" role="navigation">
         <?php

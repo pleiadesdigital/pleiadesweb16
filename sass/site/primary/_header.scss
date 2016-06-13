@@ -1,4 +1,13 @@
 .site-header {
+  position: relative;
+  min-height: 40px;
+  @include breakpoint($zona1) {
+    min-height: 80px;
+  }
+  @include breakpoint($zona2) {
+    min-height: 80px;
+  }
+
   @include back-image($backimage1);
   // SITE LOGO
   .site-logo {
@@ -74,36 +83,50 @@
     } //.site-description
   } //.site-branding
 
-
-
+  //MENU-TOGGLE
   .menu-toggle {
+    position: fixed;
+    z-index: 100;
+    top: 0.5em;
+    right: 0.5em;
     background-color: transparent;
     border: 1px solid #D1D1D1;
     color: #1A1A1A;
     font-size: 14px;
     font-weight: 400;
-    margin: 1.0769223077 0px;
+    margin: 1.0769223077em 0px;
     padding: 0.769230769em;
     @include breakpoint($zona1) {
       font-size: 16px;
-      margin: 1.3125em 0;
-      padding: 0.8125em 0.875em 0.6875em;
+      margin: 0px;
+      //padding: 0.8125em 0.875em 0.6875em;
     } //breakpoint($zona1)
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: transparent;
       border-color: #007ACC;
       color: #007ACC;
+    }
+    &:focus {
+      background-color: transparent;
+      /*border-color: #007ACC;*/
+      color: #007ACC;
     } //&:hover, &:focus
     &.toggled-on {
-      &:hover,
-      &:focus {
+      background-color: #1A1A1A;
+      border-color: #1A1A1A;
+      color: #FFFFFF;
+      &:hover {
+        outline: thin dotted #FFF;
         background-color: #1A1A1A;
-        border-color: #1A1A1A;
+        color: #FFFFFF;
+      }
+      &:focus {
+        outline: thin dotted #FFF;
+        background-color: #1A1A1A;
         color: #FFFFFF;
       } //&:hover, &:focus
       &:focus {
-        outline: thin dotted;
+
       }
     } //&.toggled-on
     &:focus {
