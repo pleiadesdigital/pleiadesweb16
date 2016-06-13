@@ -208,11 +208,15 @@
                 } //&:after
               } //&.menu-item-has-children > a
               ul {
-                top: -1px;
+                //border-top: 1px solid #D1D1D1;
+                top: 0px;
                 &:before,
                 &:after {
                   border: 0px;
                 } //&:before, &:after
+                li {
+                  border-top: none;
+                } //li(3rd level)
               } //ul(3rd level)
             } //li(2nd level)
           } //ul(2nd level)

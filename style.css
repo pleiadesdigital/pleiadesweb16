@@ -942,14 +942,18 @@ a:hover, a:active {
   }
   /* line 210, sass/navigation/_menus.scss */
   .site-header-menu .main-navigation ul li ul li ul {
-    top: -1px;
+    top: 0px;
   }
-  /* line 212, sass/navigation/_menus.scss */
+  /* line 213, sass/navigation/_menus.scss */
   .site-header-menu .main-navigation ul li ul li ul:before, .site-header-menu .main-navigation ul li ul li ul:after {
     border: 0px;
   }
+  /* line 217, sass/navigation/_menus.scss */
+  .site-header-menu .main-navigation ul li ul li ul li {
+    border-top: none;
+  }
 
-  /* line 224, sass/navigation/_menus.scss */
+  /* line 228, sass/navigation/_menus.scss */
   .dropdown-toggle,
   .main-navigation ul .dropdown-toggle.toggled-on,
   .menu-toggle {
@@ -958,21 +962,21 @@ a:hover, a:active {
 }
 /*************************************/
 /*************************************/
-/* line 242, sass/navigation/_menus.scss */
+/* line 246, sass/navigation/_menus.scss */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-/* line 247, sass/navigation/_menus.scss */
+/* line 251, sass/navigation/_menus.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%;
 }
-/* line 252, sass/navigation/_menus.scss */
+/* line 256, sass/navigation/_menus.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -1349,6 +1353,63 @@ a:hover, a:active {
     font-size: 18px;
     font-size: 1.125rem;
   }
+}
+
+/* line 51, sass/site/primary/_posts-and-pages.scss */
+.entry-meta {
+  padding: 0.3em 0px;
+  font-size: 12.8px;
+  font-size: 0.8rem;
+  background: #EEEEEE;
+  font-family: "Roboto", serif;
+  text-align: center;
+}
+@media (min-width: 801px) {
+  /* line 51, sass/site/primary/_posts-and-pages.scss */
+  .entry-meta {
+    text-align: left;
+    padding: 0.5em 1em;
+    font-size: 14.4px;
+    font-size: 0.9rem;
+  }
+}
+/* line 62, sass/site/primary/_posts-and-pages.scss */
+.entry-meta a {
+  font-weight: 400;
+}
+/* line 65, sass/site/primary/_posts-and-pages.scss */
+.entry-meta .byline {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.5;
+}
+/* line 71, sass/site/primary/_posts-and-pages.scss */
+.entry-meta .posted-on {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.5;
+}
+/* line 77, sass/site/primary/_posts-and-pages.scss */
+.entry-meta .comments-link {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.5;
+}
+
+/* line 87, sass/site/primary/_posts-and-pages.scss */
+.deck {
+  margin-bottom: 1em;
+}
+/* line 89, sass/site/primary/_posts-and-pages.scss */
+.deck p {
+  text-align: center;
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 /*--------------------------------------------------------------

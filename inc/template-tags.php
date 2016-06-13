@@ -18,24 +18,32 @@ function pleiadesweb16_posted_on() {
 	}
 
 	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
+		esc_attr(get_the_date('c')),
+		esc_html(get_the_date('j \d\e F \d\e Y')),
+		esc_attr(get_the_modified_date('c')),
+		esc_html(get_the_modified_date())
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'pleiadesweb16' ),
+		esc_html_x( 'publicado el %s', 'post date', 'pleiadesweb16' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
+  // Display the author's avatar if he has one
+  /*$author_id = get_the_author_meta('ID');
+  echo "<div class='author-avatar'>" . get_avatar($author_id) . "</div>";*/
+
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'pleiadesweb16' ),
+		esc_html_x( 'escrito por %s', 'post author', 'pleiadesweb16' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
-
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
+	echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>';
+//	Comments
+	if (!post_password_required() && (comments_open() || get_comments_number())) {
+		echo '<span class="comments-link">';
+		comments_popup_link(sprintf(wp_kses(__('Deje un comentario<span class="screen-reader-text"> on %s</span>', 'pleiadesweb16'), array('span' => array('class' => array()))), get_the_title()));
+		echo '</span>';
+	}
 }
 endif;
 
@@ -59,10 +67,9 @@ function pleiadesweb16_entry_footer() {
 		}
 	}
 
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+	if (!is_single() && !post_password_required() && (comments_open() || get_comments_number())) {
 		echo '<span class="comments-link">';
-		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'pleiadesweb16' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link(sprintf(wp_kses(__('Leave a Comment<span class="screen-reader-text"> on %s</span>', 'pleiadesweb16'), array('span' => array('class' => array()))), get_the_title()));
 		echo '</span>';
 	}
 
