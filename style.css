@@ -681,15 +681,15 @@ textarea {
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_links.scss */
 a {
-  color: royalblue;
+  color: #141414;
 }
 /* line 4, sass/navigation/_links.scss */
 a:visited {
-  color: olive;
+  color: #141414;
 }
 /* line 7, sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #141414;
 }
 /* line 12, sass/navigation/_links.scss */
 a:focus {
@@ -1326,7 +1326,7 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
-/* line 33, sass/site/primary/_posts-and-pages.scss */
+/* line 32, sass/site/primary/_posts-and-pages.scss */
 .site-main {
   margin: 1.4em;
   font-size: 14.4px;
@@ -1334,13 +1334,13 @@ a:hover, a:active {
   line-height: 1.6em;
 }
 @media (min-width: 40em) {
-  /* line 33, sass/site/primary/_posts-and-pages.scss */
+  /* line 32, sass/site/primary/_posts-and-pages.scss */
   .site-main {
     margin: 1.8em;
   }
 }
 @media (min-width: 57em) {
-  /* line 33, sass/site/primary/_posts-and-pages.scss */
+  /* line 32, sass/site/primary/_posts-and-pages.scss */
   .site-main {
     border: 2px dotted aquamarine;
     max-width: 45em;
@@ -1348,14 +1348,14 @@ a:hover, a:active {
   }
 }
 @media (min-width: 40em) {
-  /* line 33, sass/site/primary/_posts-and-pages.scss */
+  /* line 32, sass/site/primary/_posts-and-pages.scss */
   .site-main {
     font-size: 18px;
     font-size: 1.125rem;
   }
 }
 
-/* line 51, sass/site/primary/_posts-and-pages.scss */
+/* line 50, sass/site/primary/_posts-and-pages.scss */
 .entry-meta {
   padding: 0.3em 0px;
   font-size: 12.8px;
@@ -1365,7 +1365,7 @@ a:hover, a:active {
   text-align: center;
 }
 @media (min-width: 801px) {
-  /* line 51, sass/site/primary/_posts-and-pages.scss */
+  /* line 50, sass/site/primary/_posts-and-pages.scss */
   .entry-meta {
     text-align: left;
     padding: 0.5em 1em;
@@ -1373,25 +1373,25 @@ a:hover, a:active {
     font-size: 0.9rem;
   }
 }
-/* line 62, sass/site/primary/_posts-and-pages.scss */
+/* line 61, sass/site/primary/_posts-and-pages.scss */
 .entry-meta a {
   font-weight: 400;
 }
-/* line 65, sass/site/primary/_posts-and-pages.scss */
+/* line 64, sass/site/primary/_posts-and-pages.scss */
 .entry-meta .byline {
   display: block;
   padding: 0px;
   margin: 0px;
   line-height: 1.5;
 }
-/* line 71, sass/site/primary/_posts-and-pages.scss */
+/* line 70, sass/site/primary/_posts-and-pages.scss */
 .entry-meta .posted-on {
   display: block;
   padding: 0px;
   margin: 0px;
   line-height: 1.5;
 }
-/* line 77, sass/site/primary/_posts-and-pages.scss */
+/* line 76, sass/site/primary/_posts-and-pages.scss */
 .entry-meta .comments-link {
   display: block;
   padding: 0px;
@@ -1399,17 +1399,62 @@ a:hover, a:active {
   line-height: 1.5;
 }
 
-/* line 87, sass/site/primary/_posts-and-pages.scss */
+/* line 85, sass/site/primary/_posts-and-pages.scss */
 .deck {
   margin-bottom: 1em;
 }
-/* line 89, sass/site/primary/_posts-and-pages.scss */
+/* line 87, sass/site/primary/_posts-and-pages.scss */
 .deck p {
   text-align: center;
   font-size: 17.6px;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
+}
+
+/* line 103, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .entry-meta a {
+  text-decoration: none;
+}
+/* line 109, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-content a {
+  text-decoration: none;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  border-bottom: 1px dashed #C1C1C1;
+}
+/* line 114, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-content a:hover, .site-main article .entry-content a:focus {
+  color: darkmagenta;
+  border-bottom: 1px dashed darkmagenta;
+}
+/* line 122, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-summary a {
+  text-decoration: none;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  border-bottom: 1px dashed #C1C1C1;
+}
+/* line 127, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-summary a:hover, .site-main article .entry-summary a:focus {
+  color: darkmagenta;
+  border-bottom: 1px dashed darkmagenta;
+}
+/* line 135, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-footer a {
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
