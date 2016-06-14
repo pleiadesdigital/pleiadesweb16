@@ -77,7 +77,12 @@ function pleiadesweb16_scripts() {
 
   // FONTS
   // Google fonts
-  wp_enqueue_style('pleiadesweb16-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,400italic,300italic|Merriweather:400,300,700');
+
+  // FONTS
+  // Titillium Web & Roboto Slab
+  wp_enqueue_style('pleiadesweb-google-fonts', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,400italic,600,700,600italic');
+
+  /*wp_enqueue_style('pleiadesweb16-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,400italic,300italic|Merriweather:400,300,700');*/
 
   // Local fonts
   //wp_enqueue_style('pleiadesweb16-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css');

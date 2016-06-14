@@ -234,7 +234,7 @@ svg:not(:root) {
 
 /* line 104, sass/_normalize.scss */
 figure {
-  margin: 1em 40px;
+  margin: 0px;
 }
 
 /* line 108, sass/_normalize.scss */
@@ -370,7 +370,7 @@ input,
 select,
 textarea {
   color: black;
-  font-family: "Roboto", serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -387,9 +387,9 @@ textarea {
 /* line 1, sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: "Merriweather", serif;
+  font-family: "Titillium Web", sans-serif;
   line-height: 1.3em;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: 300;
 }
@@ -513,12 +513,38 @@ body {
 blockquote, q {
   quotes: "" "";
 }
-/* line 18, sass/elements/_elements.scss */
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
+
+/* line 23, sass/elements/_elements.scss */
+blockquote {
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin: 1em 0px 1.5em 2em;
+  position: relative;
+}
+@media (min-width: 801px) {
+  /* line 23, sass/elements/_elements.scss */
+  blockquote {
+    font-size: 19.2px;
+    font-size: 1.2rem;
+  }
+}
+/* line 31, sass/elements/_elements.scss */
+blockquote::before {
+  font-family: 'Fontawesome';
+  content: "\f10d";
+  position: absolute;
+  left: -1.5em;
+  color: #BBB;
+}
+@media (min-width: 801px) {
+  /* line 31, sass/elements/_elements.scss */
+  blockquote::before {
+    left: -2em;
+  }
 }
 
-/* line 24, sass/elements/_elements.scss */
+/* line 45, sass/elements/_elements.scss */
 hr {
   background-color: #ccc;
   border: 0;
@@ -528,7 +554,7 @@ hr {
 
 /* line 1, sass/elements/_lists.scss */
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0px 0px 1.5em 1.5em;
 }
 
 /* line 5, sass/elements/_lists.scss */
@@ -545,20 +571,20 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em;
+  margin-left: 1em;
 }
 
 /* line 19, sass/elements/_lists.scss */
 dt {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* line 23, sass/elements/_lists.scss */
 dd {
-  margin: 0 1.5em 1.5em;
+  margin: 0px 1.5em 1.5em;
 }
 
-/* line 33, sass/elements/_elements.scss */
+/* line 54, sass/elements/_elements.scss */
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -727,7 +753,7 @@ a:hover, a:active {
 }
 /* line 22, sass/navigation/_menus.scss */
 .site-header-menu .main-navigation {
-  font-family: "Roboto", serif;
+  font-family: "Titillium Web", sans-serif;
 }
 /* line 24, sass/navigation/_menus.scss */
 .site-header-menu .main-navigation ul {
@@ -1043,7 +1069,8 @@ a:hover, a:active {
 }
 
 /* line 13, sass/modules/_alignments.scss */
-.aligncenter {
+.aligncenter,
+.alignnone {
   clear: both;
   display: block;
   margin-left: auto;
@@ -1152,7 +1179,7 @@ a:hover, a:active {
 }
 /* line 37, sass/site/primary/_header.scss */
 .site-header .site-logo a .site-firstletter {
-  font-family: "Roboto", serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 1.5em;
   font-weight: 300;
   text-align: center;
@@ -1166,7 +1193,7 @@ a:hover, a:active {
 /* line 51, sass/site/primary/_header.scss */
 .site-header .site-branding .site-title {
   margin: 0px;
-  font-family: "Roboto", serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 32px;
   font-size: 2rem;
   font-weight: 300;
@@ -1302,17 +1329,24 @@ a:hover, a:active {
 
 /* line 9, sass/site/primary/_posts-and-pages.scss */
 .byline,
+.posted-on,
+.entry-meta .comments-link {
+  display: block;
+  padding: 0px;
+}
+
+/* line 16, sass/site/primary/_posts-and-pages.scss */
 .updated:not(.published) {
   display: none;
 }
 
-/* line 14, sass/site/primary/_posts-and-pages.scss */
+/* line 20, sass/site/primary/_posts-and-pages.scss */
 .single .byline,
 .group-blog .byline {
   display: inline;
 }
 
-/* line 19, sass/site/primary/_posts-and-pages.scss */
+/* line 25, sass/site/primary/_posts-and-pages.scss */
 .page-content,
 .entry-content,
 .entry-summary {
@@ -1320,13 +1354,19 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-/* line 26, sass/site/primary/_posts-and-pages.scss */
+/* line 32, sass/site/primary/_posts-and-pages.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
 }
 
-/* line 32, sass/site/primary/_posts-and-pages.scss */
+/* line 37, sass/site/primary/_posts-and-pages.scss */
+.single .hentry,
+.page .hentry {
+  padding-bottom: 0px;
+}
+
+/* line 43, sass/site/primary/_posts-and-pages.scss */
 .site-main {
   margin: 1.4em;
   font-size: 14.4px;
@@ -1334,13 +1374,13 @@ a:hover, a:active {
   line-height: 1.6em;
 }
 @media (min-width: 40em) {
-  /* line 32, sass/site/primary/_posts-and-pages.scss */
+  /* line 43, sass/site/primary/_posts-and-pages.scss */
   .site-main {
     margin: 1.8em;
   }
 }
 @media (min-width: 57em) {
-  /* line 32, sass/site/primary/_posts-and-pages.scss */
+  /* line 43, sass/site/primary/_posts-and-pages.scss */
   .site-main {
     border: 2px dotted aquamarine;
     max-width: 45em;
@@ -1348,75 +1388,121 @@ a:hover, a:active {
   }
 }
 @media (min-width: 40em) {
-  /* line 32, sass/site/primary/_posts-and-pages.scss */
+  /* line 43, sass/site/primary/_posts-and-pages.scss */
   .site-main {
     font-size: 18px;
     font-size: 1.125rem;
   }
 }
 
-/* line 50, sass/site/primary/_posts-and-pages.scss */
-.entry-meta {
+/* line 64, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .entry-title {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 28.8px;
+  font-size: 1.8rem;
+  line-height: 1.3em;
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #000000;
+  word-wrap: break-word;
+}
+@media (min-width: 801px) {
+  /* line 64, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-header .entry-title {
+    font-size: 35.2px;
+    font-size: 2.2rem;
+  }
+}
+/* line 78, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .entry-title a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 81, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .entry-title a:hover, .site-main article .entry-header .entry-title a:focus {
+  color: darkmagenta;
+  border-bottom: 1px dashed darkmagenta;
+}
+/* line 90, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .entry-meta {
   padding: 0.3em 0px;
   font-size: 12.8px;
   font-size: 0.8rem;
   background: #EEEEEE;
-  font-family: "Roboto", serif;
+  font-family: "Titillium Web", sans-serif;
   text-align: center;
 }
 @media (min-width: 801px) {
-  /* line 50, sass/site/primary/_posts-and-pages.scss */
-  .entry-meta {
-    text-align: left;
-    padding: 0.5em 1em;
-    font-size: 14.4px;
-    font-size: 0.9rem;
+  /* line 90, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-header .entry-meta {
+    padding: 0.5em 1em 0.7em;
+    font-size: 16px;
+    font-size: 1rem;
   }
 }
-/* line 61, sass/site/primary/_posts-and-pages.scss */
-.entry-meta a {
+/* line 100, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .entry-meta a {
   font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px dashed #C1C1C1;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
-/* line 64, sass/site/primary/_posts-and-pages.scss */
-.entry-meta .byline {
+/* line 106, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .entry-meta a:hover, .site-main article .entry-header .entry-meta a:focus {
+  color: darkmagenta;
+  border-bottom: 1px dashed darkmagenta;
+}
+/* line 112, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .entry-meta .byline {
   display: block;
   padding: 0px;
   margin: 0px;
   line-height: 1.5;
 }
-/* line 70, sass/site/primary/_posts-and-pages.scss */
-.entry-meta .posted-on {
+/* line 118, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .entry-meta .posted-on {
   display: block;
   padding: 0px;
   margin: 0px;
   line-height: 1.5;
 }
-/* line 76, sass/site/primary/_posts-and-pages.scss */
-.entry-meta .comments-link {
+/* line 124, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .entry-meta .comments-link {
   display: block;
   padding: 0px;
   margin: 0px;
   line-height: 1.5;
 }
-
-/* line 85, sass/site/primary/_posts-and-pages.scss */
-.deck {
+/* line 132, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .deck {
   margin-bottom: 1em;
 }
-/* line 87, sass/site/primary/_posts-and-pages.scss */
-.deck p {
+/* line 134, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-header .deck p {
   text-align: center;
-  font-size: 17.6px;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 300;
   line-height: 1.5;
 }
-
-/* line 103, sass/site/primary/_posts-and-pages.scss */
-.site-main article .entry-header .entry-meta a {
-  text-decoration: none;
+@media (min-width: 801px) {
+  /* line 134, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-header .deck p {
+    font-size: 17.6px;
+    font-size: 1.1rem;
+  }
 }
-/* line 109, sass/site/primary/_posts-and-pages.scss */
+/* line 146, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content a {
   text-decoration: none;
   -moz-transition: all 1s;
@@ -1429,12 +1515,27 @@ a:hover, a:active {
   transition-duration: 0.4s;
   border-bottom: 1px dashed #C1C1C1;
 }
-/* line 114, sass/site/primary/_posts-and-pages.scss */
+/* line 151, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content a:hover, .site-main article .entry-content a:focus {
   color: darkmagenta;
   border-bottom: 1px dashed darkmagenta;
 }
-/* line 122, sass/site/primary/_posts-and-pages.scss */
+/* line 157, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-content img {
+  margin-bottom: 1em;
+}
+/* line 161, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-content figure img {
+  margin-bottom: 0px;
+}
+/* line 164, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-content figure .wp-caption-text {
+  margin: 0px;
+  font-size: 11.2px;
+  font-size: 0.7rem;
+  color: #3a3a3a;
+}
+/* line 172, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-summary a {
   text-decoration: none;
   -moz-transition: all 1s;
@@ -1447,14 +1548,86 @@ a:hover, a:active {
   transition-duration: 0.4s;
   border-bottom: 1px dashed #C1C1C1;
 }
-/* line 127, sass/site/primary/_posts-and-pages.scss */
+/* line 177, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-summary a:hover, .site-main article .entry-summary a:focus {
   color: darkmagenta;
   border-bottom: 1px dashed darkmagenta;
 }
-/* line 135, sass/site/primary/_posts-and-pages.scss */
+/* line 184, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-footer {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 15.2px;
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+}
+/* line 189, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-footer a {
   text-decoration: none;
+}
+/* line 191, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-footer a:hover, .site-main article .entry-footer a:focus {
+  color: darkmagenta;
+  border-bottom: 1px dashed darkmagenta;
+}
+/* line 197, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-footer::before, .site-main article .entry-footer::after {
+  display: block;
+  content: "";
+  width: 7em;
+  border-bottom: 1px solid #C3C3C3;
+  margin: 1em auto;
+}
+/* line 208, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-footer span {
+  margin: 0.5em 0px;
+}
+/* line 209, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-footer span a {
+  font-weight: 400;
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 1px dashed #C1C1C1;
+}
+/* line 216, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-footer span::after {
+  content: "|";
+  padding: 0px 1em;
+}
+/* line 220, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-footer span:last-of-type::after {
+  content: "";
+  padding: 0px;
+}
+
+/* line 233, sass/site/primary/_posts-and-pages.scss */
+.site-content ul li {
+  list-style: square;
+  line-height: 1.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+/* line 238, sass/site/primary/_posts-and-pages.scss */
+.site-content ul li:last-child {
+  margin-bottom: 0px;
+}
+/* line 241, sass/site/primary/_posts-and-pages.scss */
+.site-content ul li > ul {
+  margin-bottom: -0.5em;
+}
+/* line 247, sass/site/primary/_posts-and-pages.scss */
+.site-content ol li {
+  line-height: 1.3em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+/* line 251, sass/site/primary/_posts-and-pages.scss */
+.site-content ol li:last-child {
+  margin-bottom: 0px;
+}
+/* line 254, sass/site/primary/_posts-and-pages.scss */
+.site-content ol li > ol {
+  margin-bottom: -0.5em;
 }
 
 /*--------------------------------------------------------------
@@ -1522,7 +1695,6 @@ object {
 --------------------------------------------------------------*/
 /* line 1, sass/media/_captions.scss */
 .wp-caption {
-  margin-bottom: 1.5em;
   max-width: 100%;
 }
 /* line 5, sass/media/_captions.scss */
@@ -1555,41 +1727,71 @@ object {
   text-align: center;
   vertical-align: top;
   width: 100%;
+  padding: 1em;
 }
 /* line 11, sass/media/_galleries.scss */
+.gallery-item a {
+  display: inline-block;
+  border-bottom: none !important;
+}
+/* line 14, sass/media/_galleries.scss */
+.gallery-item a:hover, .gallery-item a:focus {
+  border-bottom: none;
+  box-shadow: none;
+  border-bottom: none;
+}
+/* line 20, sass/media/_galleries.scss */
+.gallery-item a img {
+  display: block;
+  padding: 0.5em;
+  margin: 0px auto;
+  border: 1px solid #FFFFFF;
+}
+/* line 26, sass/media/_galleries.scss */
+.gallery-item a:hover img, .gallery-item a:focus img {
+  border-color: #C3C3C3;
+}
+/* line 31, sass/media/_galleries.scss */
+.gallery-item .gallery-caption {
+  line-height: 1.2 !important;
+  font-size: 0.7em !important;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 39, sass/media/_galleries.scss */
 .gallery-columns-2 .gallery-item {
   max-width: 50%;
 }
-/* line 15, sass/media/_galleries.scss */
+/* line 42, sass/media/_galleries.scss */
 .gallery-columns-3 .gallery-item {
   max-width: 33.33%;
 }
-/* line 19, sass/media/_galleries.scss */
+/* line 45, sass/media/_galleries.scss */
 .gallery-columns-4 .gallery-item {
   max-width: 25%;
 }
-/* line 23, sass/media/_galleries.scss */
+/* line 48, sass/media/_galleries.scss */
 .gallery-columns-5 .gallery-item {
   max-width: 20%;
 }
-/* line 27, sass/media/_galleries.scss */
+/* line 51, sass/media/_galleries.scss */
 .gallery-columns-6 .gallery-item {
   max-width: 16.66%;
 }
-/* line 31, sass/media/_galleries.scss */
+/* line 54, sass/media/_galleries.scss */
 .gallery-columns-7 .gallery-item {
   max-width: 14.28%;
 }
-/* line 35, sass/media/_galleries.scss */
+/* line 57, sass/media/_galleries.scss */
 .gallery-columns-8 .gallery-item {
   max-width: 12.5%;
 }
-/* line 39, sass/media/_galleries.scss */
+/* line 60, sass/media/_galleries.scss */
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%;
 }
 
-/* line 44, sass/media/_galleries.scss */
+/* line 65, sass/media/_galleries.scss */
 .gallery-caption {
   display: block;
 }

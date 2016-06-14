@@ -10,7 +10,8 @@
 	margin-left: 1.5em;
 }
 
-.aligncenter {
+.aligncenter,
+.alignnone {
 	clear: both;
 	@include center-block;
 }
