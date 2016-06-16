@@ -264,82 +264,105 @@
 /*--------------------------------------------------------------
 ## Other Navigation
 --------------------------------------------------------------*/
+//navigation between posts
 
 .post-navigation {
   padding: 2em 0;
   font-family: $font__main;
   text-align: left;
   overflow: hidden;
-}
-
-@media screen and (min-width: 50em) {
-  .post-navigation {
+  @include breakpoint($zona2) {
     padding: 2em 3em;
   }
-}
-
-.nav-links {
-  max-width: 45em;
-  margin: 0 auto;
-  padding: 0 .4em;
-}
-
-.post-navigation a {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  padding: 1em;
-  border: 1px solid #c3c3c3;
-}
-
-.post-navigation a:hover,
-.post-navigation a:focus {
-  border-color: #000;
-}
-
-.post-navigation .post-title {
-  font-size: 1.2em;
-  font-weight: 700;
-}
-
-.post-navigation a:hover .post-title,
-.post-navigation a:focus .post-title {
-  text-decoration: underline;
-}
-
-.nav-previous {
-  padding-bottom: 1em;
-}
-
-@media screen and (min-width: 30em) {
-
   .nav-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 0;
-  }
+    max-width: 45em;
+    margin: 0px auto;
+    padding: 0px 0.4em;
+    @include breakpoint($zona3) {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 0px;
+    }
+    .nav-previous {
+      padding-bottom: 1em;
+      @include breakpoint($zona3) {
+        display: flex;
+        align-items: stretch;
+        float: left;
+        width: 48%;
+        padding-bottom: 0px;
+      }
+      a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        padding: 1em;
+        border: 1px solid #C3C3C3;
+        @include single-transition();
+        &:hover {
+          border-color: darkmagenta;
+        } //&:hover
+        .post-title {
+          font-size: 1.1em;
+          font-weight: 400;
+          border-bottom: 1px dotted #CCCCCC;
+          @include single-transition();
+          @include transition-duration(0.5s);
+        } //.post-title
+        &:hover .post-title,
+        &:focus .post-title {
+          border-bottom: 1px dotted darkmagenta;
+        } //&:hover .post-title, &:focus .post-title
+        .meta-nav {
+          display: block;
+          @include breakpoint($zona3) {
+            padding-bottom: 1em;
+          } //breakpoint($zona3)
+        } //.meta-nav
+      } //a
+    } //.nav-previous
+    .nav-next {
+      @include breakpoint($zona3) {
+        display: flex;
+        align-items: stretch;
+        float: left;
+        width: 48%;
+      }
+      a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        padding: 1em;
+        border: 1px solid #C3C3C3;
+        @include single-transition();
+        &:hover {
+          border-color: darkmagenta;
+        } //&:hover
+        .post-title {
+          font-size: 1.1em;
+          font-weight: 400;
+          border-bottom: 1px dotted #CCCCCC;
+          @include single-transition();
+          @include transition-duration(0.5s);
+        } //.post-title
+        &:hover .post-title,
+        &:focus .post-title {
+          border-bottom: 1px dotted darkmagenta;
+        } //&:hover .post-title, &:focus .post-title
+        .meta-nav {
+          display: block;
+          @include breakpoint($zona3) {
+            padding-bottom: 1em;
+          } //breakpoint($zona3)
+        } //.meta-nav
+      } //a
+    } //.nav-next
+  } //.nav-links
+} //.post-navigation
 
-  .post-navigation .nav-previous {
-    display: flex;
-    align-items: stretch;
-    float: left;
-    width: 48%;
-  }
 
-  .nav-previous {
-    padding-bottom: 0;
-  }
-
-  .post-navigation .nav-next {
-    display: flex;
-    align-items: stretch;
-    float: right;
-    text-align: right;
-    width: 48%;
-  }
-}
-
+/*
 .post-navigation .meta-nav {
   display: block;
 }
@@ -348,7 +371,7 @@
   .post-navigation .meta-nav {
     padding-bottom: 1em;
   }
-}
+}*/
 
 
 
