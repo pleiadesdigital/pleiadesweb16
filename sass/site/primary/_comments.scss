@@ -58,7 +58,7 @@
             margin-left: 80px;
           } //breakpoint($zona3)
           @include breakpoint($zona4) {
-            margin-left: 90px;
+            margin-left: 80px;
           } //breakpoint($zona4)
         } //.comment-content
       } //.comment-body
@@ -96,7 +96,13 @@
 .comment-author {
   font-size: 1.4em;
   line-height: 1.3em;
-}
+  b {
+    font-weight: 400;
+  } //b
+  @include breakpoint($iphone) {
+    font-size: 1.1em;
+  } //breakpoint($iphone)
+} //.comment-author
 
 .says {
   font-size: 80%;

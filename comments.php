@@ -34,15 +34,6 @@ if ( post_password_required() ) {
 			?>
 		</h2>
 
-		<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
-		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'pleiadesweb16'); ?></h2>
-			<div class="nav-links">
-				<div class="nav-previous"><?php previous_comments_link(esc_html__('Older Comments', 'pleiadesweb16')); ?></div>
-				<div class="nav-next"><?php next_comments_link(esc_html__('Newer Comments', 'pleiadesweb16')); ?></div>
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // Check for comment navigation. ?>
 
 		<ol class="comment-list">
 			<?php
@@ -58,8 +49,8 @@ if ( post_password_required() ) {
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'pleiadesweb16'); ?></h2>
 			<div class="nav-links">
-				<div class="nav-previous"><?php previous_comments_link(esc_html__('Older Comments', 'pleiadesweb16')); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__('Newer Comments', 'pleiadesweb16')); ?></div>
+				<div class="nav-previous"><?php previous_comments_link(esc_html__('Comentarios Anteriores', 'pleiadesweb16')); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__('Comentarios Nuevos', 'pleiadesweb16')); ?></div>
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-below -->
 		<?php

@@ -17,14 +17,17 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
-
+  width: 50%;
+  @include breakpoint($iphone) {
+    width: 100%;
+  }
 	&:focus {
 		color: $color__text-input-focus;
 	}
 }
 
 select {
-	border: 1px solid $color__border-input;
+	border: 1px solid $magentadark;
 }
 
 input[type="text"],
@@ -42,10 +45,121 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-	padding: 3px;
+  padding: 0.5em 0.5em;
+
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus {
+  color: #111;
 }
 
 textarea {
-	padding-left: 3px;
+	padding: 10px;
 	width: 100%;
+  &:focus,
+  &:active {
+    //outline: none;
+  }
 }
+
+// Comment Form
+
+.comment-respond {
+  &::after {
+    display: block;
+    margin: 2em auto 2em;
+    content: "";
+    width: 5em;
+    border-bottom: 1px solid $greylight;
+  } //&::after
+  .comment-reply-title {
+    //margin-bottom: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200;
+  } //.comment-reply-title
+  .comment-form {
+    font-size: 1em;
+    line-height: 1.3;
+    a {
+      font-weight: 500;
+    } //a
+    .form-submit {
+      margin-top: 3em;
+      input {
+        display: block;
+        padding: 1em 1.4em;
+        font-size: 85%;
+        color: #333333;
+        line-height: 1.3em;
+        text-decoration: none;
+        border: 1px solid #C3C3C3;
+        width: 33%;
+        @include breakpoint($iphone) {
+          width: 50%;
+          margin: 0px auto;
+        }
+        &:hover,
+        &:focus {
+          border-color: #000000;
+          color: #FFFFFF;
+          background-color: #000000;
+        } //&:hover, &:focus
+      } //input
+    } //.form-submit
+    label {
+      width: 50%;
+      display: block;
+      padding-bottom: 0.2em;
+      text-align: left;
+    } //label
+    .required {
+      color: firebrick;
+    } //.required
+  } //.comment-form
+} //.comment-respond
+
+.comment-list {
+  .comment-reply-title {
+    text-align: left;
+  }
+} //.comment-list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
