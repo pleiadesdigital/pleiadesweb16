@@ -695,7 +695,7 @@ textarea {
   border-radius: 3px;
   width: 50%;
 }
-@media (max-width: 30em) {
+@media (max-width: 767px) {
   /* line 1, sass/forms/_fields.scss */
   input[type="text"],
   input[type="email"],
@@ -823,7 +823,7 @@ textarea {
   border: 1px solid #C3C3C3;
   width: 33%;
 }
-@media (max-width: 30em) {
+@media (max-width: 767px) {
   /* line 103, sass/forms/_fields.scss */
   .comment-respond .comment-form .form-submit input {
     width: 50%;
@@ -891,7 +891,7 @@ a:hover, a:active {
   flex: 0 1 100%;
   margin: 0px;
 }
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   /* line 6, sass/navigation/_menus.scss */
   .site-header-menu {
     background-color: rgba(255, 255, 255, 0.9);
@@ -899,7 +899,7 @@ a:hover, a:active {
     padding: 0px 1em;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   /* line 17, sass/navigation/_menus.scss */
   .site-header-menu.site-header-menu-home {
     margin-top: 1em;
@@ -943,7 +943,7 @@ a:hover, a:active {
 .site-header-menu .main-navigation ul li.menu-item-has-children > a {
   margin-right: 56px;
 }
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   /* line 53, sass/navigation/_menus.scss */
   .site-header-menu .main-navigation ul li .dropdown-toggle {
     background-color: transparent;
@@ -1226,7 +1226,7 @@ a:hover, a:active {
   -webkit-transition: all 1s;
   transition: all 1s;
 }
-@media (max-width: 30em) {
+@media (max-width: 767px) {
   /* line 297, sass/navigation/_menus.scss */
   .post-navigation .nav-links .nav-previous a,
   .comment-navigation .nav-links .nav-previous a {
@@ -1295,7 +1295,7 @@ a:hover, a:active {
   -webkit-transition: all 1s;
   transition: all 1s;
 }
-@media (max-width: 30em) {
+@media (max-width: 767px) {
   /* line 336, sass/navigation/_menus.scss */
   .post-navigation .nav-links .nav-next a,
   .comment-navigation .nav-links .nav-next a {
@@ -1477,7 +1477,7 @@ a:hover, a:active {
   -o-background-size: cover;
   background-size: cover;
 }
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   /* line 1, sass/site/primary/_header.scss */
   .site-header {
     min-height: 80px;
@@ -1550,7 +1550,7 @@ a:hover, a:active {
   border-bottom: 1px solid rgba(50, 50, 50, 0.7);
   opacity: 0.8;
 }
-@media (max-width: 30em) {
+@media (max-width: 767px) {
   /* line 51, sass/site/primary/_header.scss */
   .site-header .site-branding .site-title {
     font-size: 25.6px;
@@ -1596,7 +1596,7 @@ a:hover, a:active {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   /* line 88, sass/site/primary/_header.scss */
   .site-header .menu-toggle {
     font-size: 16px;
@@ -1657,17 +1657,17 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-/* line 1, sass/site/primary/_posts-and-pages.scss */
+/* line 2, sass/site/primary/_posts-and-pages.scss */
 .sticky {
   display: block;
 }
 
-/* line 5, sass/site/primary/_posts-and-pages.scss */
+/* line 6, sass/site/primary/_posts-and-pages.scss */
 .hentry {
-  margin: 0 0 1.5em;
+  margin: 0px 0px 1.5em;
 }
 
-/* line 9, sass/site/primary/_posts-and-pages.scss */
+/* line 10, sass/site/primary/_posts-and-pages.scss */
 .byline,
 .posted-on,
 .entry-meta .comments-link {
@@ -1675,18 +1675,18 @@ a:hover, a:active {
   padding: 0px;
 }
 
-/* line 16, sass/site/primary/_posts-and-pages.scss */
+/* line 17, sass/site/primary/_posts-and-pages.scss */
 .updated:not(.published) {
   display: none;
 }
 
-/* line 20, sass/site/primary/_posts-and-pages.scss */
+/* line 21, sass/site/primary/_posts-and-pages.scss */
 .single .byline,
 .group-blog .byline {
   display: inline;
 }
 
-/* line 25, sass/site/primary/_posts-and-pages.scss */
+/* line 26, sass/site/primary/_posts-and-pages.scss */
 .page-content,
 .entry-content,
 .entry-summary {
@@ -1694,51 +1694,78 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-/* line 32, sass/site/primary/_posts-and-pages.scss */
+/* line 33, sass/site/primary/_posts-and-pages.scss */
 .page-links {
   clear: both;
-  margin: 0 0 1.5em;
+  margin: 0px 0px 1.5em;
 }
 
-/* line 37, sass/site/primary/_posts-and-pages.scss */
+/* line 38, sass/site/primary/_posts-and-pages.scss */
 .single .hentry,
 .page .hentry {
   padding-bottom: 0px;
 }
 
-/* line 43, sass/site/primary/_posts-and-pages.scss */
+/* line 44, sass/site/primary/_posts-and-pages.scss */
 .site-main {
+  border: 2px dashed lightseagreen;
   margin: 1.4em;
-  font-size: 14.4px;
-  font-size: 0.9rem;
-  line-height: 1.6em;
+  font-size: 16px;
+  font-size: 1rem;
 }
-@media (min-width: 40em) {
-  /* line 43, sass/site/primary/_posts-and-pages.scss */
+@media (max-width: 767px) {
+  /* line 44, sass/site/primary/_posts-and-pages.scss */
   .site-main {
-    margin: 1.8em;
+    margin-top: 0px;
+    font-size: 17.6px;
+    font-size: 1.1rem;
+    color: royalblue;
   }
 }
-@media (min-width: 57em) {
-  /* line 43, sass/site/primary/_posts-and-pages.scss */
+@media (min-width: 768px) and (max-width: 959px) {
+  /* line 44, sass/site/primary/_posts-and-pages.scss */
   .site-main {
-    border: 2px dotted aquamarine;
+    max-width: 40em;
+    margin: 0px auto;
+    font-size: 17.6px;
+    font-size: 1.1rem;
+    color: palevioletred;
+  }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  /* line 44, sass/site/primary/_posts-and-pages.scss */
+  .site-main {
     max-width: 45em;
-    margin: 1.8em auto;
+    margin: 0px auto;
+    font-size: 19.2px;
+    font-size: 1.2rem;
+    color: rebeccapurple;
   }
 }
-@media (min-width: 40em) {
-  /* line 43, sass/site/primary/_posts-and-pages.scss */
+@media (min-width: 1200px) {
+  /* line 44, sass/site/primary/_posts-and-pages.scss */
   .site-main {
-    font-size: 18px;
-    font-size: 1.125rem;
+    max-width: 45em;
+    margin: 0px auto;
+    font-size: 20.8px;
+    font-size: 1.3rem;
+    color: darkblue;
   }
+}
+/* line 74, sass/site/primary/_posts-and-pages.scss */
+.site-main .page-header .page-title {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 200;
+  color: #7f7f7f;
+  text-transform: uppercase;
+  margin-bottom: 0px;
 }
 
-/* line 64, sass/site/primary/_posts-and-pages.scss */
+/* line 90, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-title {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
   font-size: 28.8px;
   font-size: 1.8rem;
   line-height: 1.3em;
@@ -1749,24 +1776,54 @@ a:hover, a:active {
   color: #000000;
   word-wrap: break-word;
 }
-@media (min-width: 801px) {
-  /* line 64, sass/site/primary/_posts-and-pages.scss */
+@media (max-width: 767px) {
+  /* line 90, sass/site/primary/_posts-and-pages.scss */
   .site-main article .entry-header .entry-title {
-    font-size: 35.2px;
-    font-size: 2.2rem;
+    margin-top: 0.5em;
+    font-size: 25.6px;
+    font-size: 1.6rem;
+    line-height: 1.2;
   }
 }
-/* line 78, sass/site/primary/_posts-and-pages.scss */
+@media (min-width: 768px) and (max-width: 959px) {
+  /* line 90, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-header .entry-title {
+    margin-top: 0.5em;
+    font-size: 28.8px;
+    font-size: 1.8rem;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  /* line 90, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-header .entry-title {
+    margin-top: 0.5em;
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1.3em;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 90, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-header .entry-title {
+    margin-top: 0.5em;
+    font-size: 33.6px;
+    font-size: 2.1rem;
+    line-height: 1.3em;
+  }
+}
+/* line 121, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-title a {
   color: inherit;
   text-decoration: none;
+  position: relative;
 }
-/* line 81, sass/site/primary/_posts-and-pages.scss */
+/* line 125, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-title a:hover, .site-main article .entry-header .entry-title a:focus {
   color: darkmagenta;
   border-bottom: 1px dashed darkmagenta;
 }
-/* line 90, sass/site/primary/_posts-and-pages.scss */
+/* line 138, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-meta {
   padding: 0.3em 0px;
   font-size: 12.8px;
@@ -1775,15 +1832,31 @@ a:hover, a:active {
   font-family: "Titillium Web", sans-serif;
   text-align: center;
 }
-@media (min-width: 801px) {
-  /* line 90, sass/site/primary/_posts-and-pages.scss */
+@media (min-width: 768px) and (max-width: 959px) {
+  /* line 138, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-header .entry-meta {
+    padding: 0.5em 1em 0.7em;
+    font-size: 14.4px;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  /* line 138, sass/site/primary/_posts-and-pages.scss */
   .site-main article .entry-header .entry-meta {
     padding: 0.5em 1em 0.7em;
     font-size: 16px;
     font-size: 1rem;
   }
 }
-/* line 100, sass/site/primary/_posts-and-pages.scss */
+@media (min-width: 1200px) {
+  /* line 138, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-header .entry-meta {
+    padding: 0.5em 1em 0.7em;
+    font-size: 17.6px;
+    font-size: 1.1rem;
+  }
+}
+/* line 156, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-meta a {
   font-weight: 400;
   text-decoration: none;
@@ -1797,37 +1870,37 @@ a:hover, a:active {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
-/* line 106, sass/site/primary/_posts-and-pages.scss */
+/* line 162, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-meta a:hover, .site-main article .entry-header .entry-meta a:focus {
   color: darkmagenta;
   border-bottom: 1px dashed darkmagenta;
 }
-/* line 112, sass/site/primary/_posts-and-pages.scss */
+/* line 168, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-meta .byline {
   display: block;
   padding: 0px;
   margin: 0px;
   line-height: 1.5;
 }
-/* line 118, sass/site/primary/_posts-and-pages.scss */
+/* line 177, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-meta .posted-on {
   display: block;
   padding: 0px;
   margin: 0px;
   line-height: 1.5;
 }
-/* line 124, sass/site/primary/_posts-and-pages.scss */
+/* line 186, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-meta .comments-link {
   display: block;
   padding: 0px;
   margin: 0px;
   line-height: 1.5;
 }
-/* line 132, sass/site/primary/_posts-and-pages.scss */
+/* line 196, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .deck {
   margin-bottom: 1em;
 }
-/* line 134, sass/site/primary/_posts-and-pages.scss */
+/* line 198, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .deck p {
   text-align: center;
   font-size: 16px;
@@ -1836,13 +1909,41 @@ a:hover, a:active {
   line-height: 1.5;
 }
 @media (min-width: 801px) {
-  /* line 134, sass/site/primary/_posts-and-pages.scss */
+  /* line 198, sass/site/primary/_posts-and-pages.scss */
   .site-main article .entry-header .deck p {
     font-size: 17.6px;
     font-size: 1.1rem;
   }
 }
-/* line 146, sass/site/primary/_posts-and-pages.scss */
+@media (max-width: 767px) {
+  /* line 209, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-content {
+    margin: 1em 0px 0px;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  /* line 209, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-content {
+    margin: 1em 0px 0px;
+  }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  /* line 209, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-content {
+    margin: 1em 0px 0px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 209, sass/site/primary/_posts-and-pages.scss */
+  .site-main article .entry-content {
+    margin: 1em 0px 0px;
+  }
+}
+/* line 223, sass/site/primary/_posts-and-pages.scss */
+.site-main article .entry-content p:last-child {
+  margin-bottom: 0.5em;
+}
+/* line 227, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content a {
   text-decoration: none;
   -moz-transition: all 1s;
@@ -1855,27 +1956,27 @@ a:hover, a:active {
   transition-duration: 0.4s;
   border-bottom: 1px dashed #C1C1C1;
 }
-/* line 151, sass/site/primary/_posts-and-pages.scss */
+/* line 232, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content a:hover, .site-main article .entry-content a:focus {
   color: darkmagenta;
   border-bottom: 1px dashed darkmagenta;
 }
-/* line 157, sass/site/primary/_posts-and-pages.scss */
+/* line 238, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content img {
   margin-bottom: 1em;
 }
-/* line 161, sass/site/primary/_posts-and-pages.scss */
+/* line 242, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content figure img {
   margin-bottom: 0px;
 }
-/* line 164, sass/site/primary/_posts-and-pages.scss */
+/* line 245, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content figure .wp-caption-text {
   margin: 0px;
   font-size: 11.2px;
   font-size: 0.7rem;
   color: #3a3a3a;
 }
-/* line 172, sass/site/primary/_posts-and-pages.scss */
+/* line 253, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-summary a {
   text-decoration: none;
   -moz-transition: all 1s;
@@ -1888,12 +1989,12 @@ a:hover, a:active {
   transition-duration: 0.4s;
   border-bottom: 1px dashed #C1C1C1;
 }
-/* line 177, sass/site/primary/_posts-and-pages.scss */
+/* line 258, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-summary a:hover, .site-main article .entry-summary a:focus {
   color: darkmagenta;
   border-bottom: 1px dashed darkmagenta;
 }
-/* line 184, sass/site/primary/_posts-and-pages.scss */
+/* line 265, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-footer {
   font-family: "Titillium Web", sans-serif;
   font-size: 15.2px;
@@ -1901,16 +2002,16 @@ a:hover, a:active {
   font-style: italic;
   text-align: center;
 }
-/* line 189, sass/site/primary/_posts-and-pages.scss */
+/* line 270, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-footer a {
   text-decoration: none;
 }
-/* line 191, sass/site/primary/_posts-and-pages.scss */
+/* line 272, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-footer a:hover, .site-main article .entry-footer a:focus {
   color: darkmagenta;
   border-bottom: 1px dashed darkmagenta;
 }
-/* line 197, sass/site/primary/_posts-and-pages.scss */
+/* line 278, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-footer::before, .site-main article .entry-footer::after {
   display: block;
   content: "";
@@ -1918,54 +2019,54 @@ a:hover, a:active {
   border-bottom: 1px solid #C3C3C3;
   margin: 1em auto;
 }
-/* line 208, sass/site/primary/_posts-and-pages.scss */
+/* line 289, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-footer span {
   margin: 0.5em 0px;
 }
-/* line 209, sass/site/primary/_posts-and-pages.scss */
+/* line 290, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-footer span a {
   font-weight: 400;
   text-decoration: none;
   color: #000000;
   border-bottom: 1px dashed #C1C1C1;
 }
-/* line 216, sass/site/primary/_posts-and-pages.scss */
+/* line 297, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-footer span::after {
   content: "|";
   padding: 0px 1em;
 }
-/* line 220, sass/site/primary/_posts-and-pages.scss */
+/* line 301, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-footer span:last-of-type::after {
   content: "";
   padding: 0px;
 }
 
-/* line 233, sass/site/primary/_posts-and-pages.scss */
+/* line 314, sass/site/primary/_posts-and-pages.scss */
 .site-content ul li {
   list-style: square;
   line-height: 1.5em;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
 }
-/* line 238, sass/site/primary/_posts-and-pages.scss */
+/* line 319, sass/site/primary/_posts-and-pages.scss */
 .site-content ul li:last-child {
   margin-bottom: 0px;
 }
-/* line 241, sass/site/primary/_posts-and-pages.scss */
+/* line 322, sass/site/primary/_posts-and-pages.scss */
 .site-content ul li > ul {
   margin-bottom: -0.5em;
 }
-/* line 247, sass/site/primary/_posts-and-pages.scss */
+/* line 328, sass/site/primary/_posts-and-pages.scss */
 .site-content ol li {
   line-height: 1.3em;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
 }
-/* line 251, sass/site/primary/_posts-and-pages.scss */
+/* line 332, sass/site/primary/_posts-and-pages.scss */
 .site-content ol li:last-child {
   margin-bottom: 0px;
 }
-/* line 254, sass/site/primary/_posts-and-pages.scss */
+/* line 335, sass/site/primary/_posts-and-pages.scss */
 .site-content ol li > ol {
   margin-bottom: -0.5em;
 }
@@ -2118,7 +2219,7 @@ a:hover, a:active {
 .comment-author b {
   font-weight: 400;
 }
-@media (max-width: 30em) {
+@media (max-width: 767px) {
   /* line 96, sass/site/primary/_comments.scss */
   .comment-author {
     font-size: 1.1em;
@@ -2256,6 +2357,61 @@ object {
 /* line 14, sass/media/_captions.scss */
 .wp-caption-text {
   text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Images
+--------------------------------------------------------------*/
+/* line 1, sass/media/_images.scss */
+.featured-image {
+  border: 3px dashed #f78b53;
+  margin-top: -1.4em;
+  margin-bottom: -1.2em;
+}
+@media (min-width: 1200px) {
+  /* line 1, sass/media/_images.scss */
+  .featured-image {
+    margin-top: -1.8em;
+  }
+}
+@media (min-width: 57em) {
+  /* line 1, sass/media/_images.scss */
+  .featured-image {
+    margin-top: -2em;
+  }
+}
+/* line 11, sass/media/_images.scss */
+.featured-image img {
+  display: block;
+  margin: 0px auto;
+}
+
+/* line 17, sass/media/_images.scss */
+.featured-image-index {
+  margin-top: 1em;
+  margin-bottom: 0px;
+  /*
+  @include breakpoint($desktop) {
+    margin-top: 0px;
+    margin-bottom: -1.5em;
+  } //breakpoint($desktop)
+  @include breakpoint($desktop_large) {
+    margin-top: 0px;
+    margin-bottom: -1em;
+  } //breakpoint($desktop_large)*/
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  /* line 17, sass/media/_images.scss */
+  .featured-image-index {
+    border: 3px dashed rebeccapurple;
+    margin-top: 0px;
+    margin-bottom: -2em;
+  }
+}
+/* line 34, sass/media/_images.scss */
+.featured-image-index img {
+  display: block;
+  margin: 0px auto;
 }
 
 /*--------------------------------------------------------------

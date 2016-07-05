@@ -1,7 +1,7 @@
 .site-header {
   position: relative;
   min-height: 40px;
-  @include breakpoint($zona1) {
+  @include breakpoint($iphone) {
     min-height: 80px;
   }
   @include breakpoint($zona2) {
@@ -99,7 +99,7 @@
     padding: 0.769230769em;
     @include single-transition();
     @include transition-duration(0.4s);
-    @include breakpoint($zona1) {
+    @include breakpoint($iphone) {
       font-size: 16px;
       margin: 0px;
       //padding: 0.8125em 0.875em 0.6875em;

@@ -6,14 +6,21 @@
 // SETUP THEME FUNCTION
 if (!function_exists('pleiadesweb16_setup')) :
   function pleiadesweb16_setup() {
+
     // Make theme available for translation.
     load_theme_textdomain('pleiadesweb16', get_template_directory() . '/languages');
+
     // Add default posts and comments RSS feed links to head.
     add_theme_support('automatic-feed-links');
+
     // Let Wordpress manage the title tag
     add_theme_support('title-tag');
+
     //Enable support for Post Thumbnails on posts and pages.
     add_theme_support('post-thumbnails');
+    set_post_thumbnail_size(828, 360, true);
+    add_image_size('small-thumb', 300, 150, true);
+
     // Navigation menus -> register
     register_nav_menus( array(
       'primary' => esc_html__('Primary', 'pleiadesweb16'),

@@ -1,0 +1,38 @@
+.featured-image {
+  border: 3px dashed #f78b53;
+  margin-top: -1.4em;
+  margin-bottom: -1.2em;
+  @include breakpoint($desktop) {
+    margin-top: -1.8em;
+  } //breakpoint($desktop)
+  @include breakpoint($desktop_large) {
+    margin-top: -2em;
+  } //breakpoint($desktop_large)
+  img {
+    display: block;
+    margin: 0px auto;
+  } //img
+} //.featured-image
+
+.featured-image-index {
+  margin-top: 1em;
+  margin-bottom: 0px;
+  @include breakpoint($tablet) {
+    border: 3px dashed rebeccapurple;
+    margin-top: 0px;
+    margin-bottom: -2em;
+  } //breakpoint($tablet)
+  /*
+  @include breakpoint($desktop) {
+    margin-top: 0px;
+    margin-bottom: -1.5em;
+  } //breakpoint($desktop)
+  @include breakpoint($desktop_large) {
+    margin-top: 0px;
+    margin-bottom: -1em;
+  } //breakpoint($desktop_large)*/
+  img {
+    display: block;
+    margin: 0px auto;
+  } //img
+} //.featured-image
