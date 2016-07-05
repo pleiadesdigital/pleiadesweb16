@@ -2365,8 +2365,8 @@ object {
 /* line 1, sass/media/_images.scss */
 .featured-image {
   border: 3px dashed #f78b53;
-  margin-top: -1.4em;
-  margin-bottom: -1.2em;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 @media (min-width: 1200px) {
   /* line 1, sass/media/_images.scss */
@@ -2400,15 +2400,31 @@ object {
     margin-bottom: -1em;
   } //breakpoint($desktop_large)*/
 }
+@media (max-width: 767px) {
+  /* line 17, sass/media/_images.scss */
+  .featured-image-index {
+    border: 2px dashed royalblue;
+  }
+}
 @media (min-width: 768px) and (max-width: 959px) {
   /* line 17, sass/media/_images.scss */
   .featured-image-index {
-    border: 3px dashed rebeccapurple;
-    margin-top: 0px;
-    margin-bottom: -2em;
+    border: 2px dashed palevioletred;
   }
 }
-/* line 34, sass/media/_images.scss */
+@media (min-width: 960px) and (max-width: 1199px) {
+  /* line 17, sass/media/_images.scss */
+  .featured-image-index {
+    border: 2px dashed rebeccapurple;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 17, sass/media/_images.scss */
+  .featured-image-index {
+    border: 2px dashed darkblue;
+  }
+}
+/* line 44, sass/media/_images.scss */
 .featured-image-index img {
   display: block;
   margin: 0px auto;
