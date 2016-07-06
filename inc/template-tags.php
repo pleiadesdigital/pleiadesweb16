@@ -48,8 +48,11 @@ if (!function_exists('pleiadesweb16_posted_on')) {
 if (!function_exists('pleiadesweb16_index_posted_on')) {
 
   function pleiadesweb16_index_posted_on() {
+
+		$author_id = get_the_author_meta('ID');
+
     $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-    if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+    if (get_the_time('U') !== get_the_modified_time('U')) {
       $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
     }
 
@@ -62,23 +65,24 @@ if (!function_exists('pleiadesweb16_index_posted_on')) {
 
     $posted_on = sprintf(
       esc_html_x( 'publicado el %s', 'post date', 'pleiadesweb16' ),
-      '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+      '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
     );
 
     $byline = sprintf(
       esc_html_x( 'escrito por %s', 'post author', 'pleiadesweb16' ),
-      '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+      '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
     );
-    echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>';
-    //	Comments
-    if (!post_password_required() && (comments_open() || get_comments_number())) {
-      echo '<span class="comments-link">';
-      comments_popup_link(sprintf(wp_kses(__('Deje un comentario<span class="screen-reader-text"> on %s</span>', 'pleiadesweb16'), array('span' => array('class' => array()))), get_the_title()));
-      echo '</span>';
-    }//endif
+    echo "<div class='meta-content'>";
+      echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>';
+      //	Comments
+      if (!post_password_required() && (comments_open() || get_comments_number())) {
+        echo '<span class="comments-link">';
+        comments_popup_link(sprintf(wp_kses(__('Deje un comentario<span class="screen-reader-text"> on %s</span>', 'pleiadesweb16'), array('span' => array('class' => array()))), get_the_title()));
+        echo '</span>';
+      }//endif
+    echo "</div>"; //<!-- .meta-content -->'
   } //pleiadesweb16_index_posted_on()
 } //if (!function_exists('pleiadesweb16_index_posted_on'))
-
 
 
 if (!function_exists( 'pleiadesweb16_entry_footer')) :
