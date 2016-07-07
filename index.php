@@ -29,7 +29,7 @@ get_header(); ?>
           the_post();
           get_template_part('template-parts/content', get_post_format());
         } //while (have_posts())
-        the_posts_navigation();
+        pleiadesweb16_paging_nav();
       } else {
         get_template_part('template-parts/content', 'none');
       } //if (have_posts())

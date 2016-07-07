@@ -193,6 +193,41 @@
           } //breakpoint($iphone)
         } //.comments-link
       } //.entry-meta
+      .index-entry-meta {
+        background: #EEEEEE;
+        @include font-size(0.8);
+        text-align: center;
+        line-height: 1.5;
+        padding: 0.5em 0px;
+        a {
+          text-decoration: none;
+          @include single-transition();
+          @include transition-duration(0.4s);
+          border-bottom: 1px dashed #C1C1C1;
+          &:hover,
+          &:focus {
+            color: darkmagenta;
+            border-bottom: 1px dashed darkmagenta;
+          } //&:hover, &:focus
+        } //a
+        .byline {
+          display: inline-block;
+          &:after {
+            content: "|";
+            padding: 0px 0.5em;
+          } //&:after
+        } //.byline
+        .posted-on {
+          display: inline-block;
+        } //.posted-on
+        .comments-link {
+          display: inline-block;
+          &:before {
+            content: "|";
+            padding: 0px 0.5em;
+          } //&:before
+        } //.comments-link
+      } //.index-entry-meta
       .deck {
         margin-bottom: 1em;
         p {
@@ -248,6 +283,35 @@
           color: #3a3a3a;
         }
       } //figure
+      &.index-excerpt {
+        margin-top: 0.5em;
+      } //&.index-excerpt
+      .continue-reading {
+        text-align: center;
+        a {
+          @include font-size(1);
+          display: inline-block;
+          margin: 0px auto 1em;
+          padding: 0.5em 1.5em;
+          text-decoration: none;
+          border: 1px solid #C3C3C3;
+          &:hover,
+          &:focus {
+            border-color: darkmagenta;
+          } //&:hover, &:focus
+          &::after {
+            content: "...";
+          } //&::after
+        } //a
+        &::after {
+          display: block;
+          content: "";
+          width: 7em;
+          border-bottom: 1px dotted #C3C3C3;
+          margin: 3em auto 1em;
+        } //&::after
+      } //.continue-reading
+
     } //.entry-content
     .entry-summary {
       a {
