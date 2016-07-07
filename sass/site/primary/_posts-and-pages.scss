@@ -1,7 +1,16 @@
 //ORIGINAL
 .sticky {
+  position: relative;
 	display: block;
-}
+  &::before {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    font-family: 'Fontawesome';
+    content: "\f08d";
+  } //&::before
+} //.sticky
 
 .hentry {
 	margin: 0px 0px 1.5em;
@@ -42,7 +51,6 @@
 
 // GLOBAL
 .site-main {
-  border: 2px dashed lightseagreen;
   margin: 1.4em; //controls all site margin
   @include font-size(1);
   @include breakpoint($iphone) {
@@ -79,6 +87,18 @@
       text-transform: uppercase;
       margin-bottom: 0px;
     } //.page-title
+    .taxonomy-description {
+      margin-top: 0.5em;
+      text-align: center;
+      @include font-size(1.1);
+      font-style: italic;
+      font-weight: 100;
+      border: 1px solid #C3C3C3;
+      padding: 0.5em 1em;
+      p {
+        margin-bottom: 0px;
+      }
+    } //.taxonomy-description
   } //page-header
 
 } //.site-main
