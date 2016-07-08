@@ -853,6 +853,25 @@ textarea {
   text-align: left;
 }
 
+/* line 143, sass/forms/_fields.scss */
+.error-404 input[type="search"],
+.search-no-results input[type="search"] {
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+}
+
+/* line 150, sass/forms/_fields.scss */
+.error-404 .search-submit,
+.search-no-results .search-submit {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
