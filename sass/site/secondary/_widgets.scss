@@ -6,3 +6,12 @@
 		max-width: 100%;
 	}
 }
+
+.widget-area {
+  .search-form {
+    border: 2px dotted cornflowerblue;
+    input[type="search"] {
+      border: 1px dotted blueviolet !important;
+    }
+  }
+} //.widget-area

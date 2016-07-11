@@ -3,22 +3,23 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 2px solid $magentadark;
   @include border-radius(4px, 4px);
   background: #FFFFFF;
   color: #000000;
   font-size: 1.1rem;
   line-height: 1;
   padding: 0.6em 1em 0.6em;
+  border: 1px solid #C3C3C3;
+  @include single-transition();
+  @include transition-duration(0.5s);
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #000000;
-  background-color: $greydark;
-  color: #FFFFFF;
+  border-color: $magentadark;
+  color: $magentadark;
 }
 
 button:focus,
@@ -29,10 +30,10 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  outline: 1px dotted $magentadark;
-  border-color: #000000;
-  background-color: $greydark;
-  color: #FFFFFF;
+  //outline: 1px dotted $magentadark;
+  border-color: $magentadark;
+  color: $magentadark;
+;
 }
 
 

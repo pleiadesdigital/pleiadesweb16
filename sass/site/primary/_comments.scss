@@ -132,14 +132,16 @@
   color: #333;
   line-height: 1.3em;
   text-decoration: none;
-  border: 1px solid #c3c3c3;
+  //border: 1px solid #c3c3c3;
+  outline: 1px solid #C3C3C3;
+  @include single-transition();
+  @include transition-duration(0.5s);
 }
 
 .reply a:hover,
 .reply a:focus {
-  background: #000;
-  color: #fff;
-  border-color: #000;
+  color: $magentadark;
+  outline: 2px solid $magentadark;
 }
 
 .comment-content ol {

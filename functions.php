@@ -25,7 +25,6 @@ if (!function_exists('pleiadesweb16_setup')) :
     register_nav_menus( array(
       'primary' => esc_html__('Primary', 'pleiadesweb16'),
       'secondary' => esc_html__('Secondary', 'pleiadesweb16'),
-
     ));
 
     // Markup for valid HTML5
@@ -67,7 +66,7 @@ add_action('after_setup_theme', 'pleiadesweb16_content_width', 0);
 // REGISTER SIDEBAR
 function pleiadesweb16_widgets_init() {
   register_sidebar(array(
-    'name'          => esc_html__('Sidebar', 'pleiadesweb16'),
+    'name'          => esc_html__('Widget Area', 'pleiadesweb16'),
     'id'            => 'sidebar-1',
     'description'   => esc_html__('Add widgets here.', 'pleiadesweb16'),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',

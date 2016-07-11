@@ -109,15 +109,16 @@ textarea {
         text-decoration: none;
         border: 1px solid #C3C3C3;
         width: 33%;
+        @include single-transition();
+        @include transition-duration(0.5s);
         @include breakpoint($iphone) {
           width: 50%;
           margin: 0px auto;
         }
         &:hover,
         &:focus {
-          border-color: #000000;
-          color: #FFFFFF;
-          background-color: #000000;
+          border-color: $magentadark;
+          color: $magentadark;
         } //&:hover, &:focus
       } //input
     } //.form-submit

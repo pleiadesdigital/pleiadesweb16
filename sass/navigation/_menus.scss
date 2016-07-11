@@ -305,7 +305,7 @@
           text-align: center;
         }
         &:hover {
-          border-color: darkmagenta;
+          border-color: $magentadark;
         } //&:hover
         .post-title {
           font-size: 1.1em;
@@ -316,7 +316,7 @@
         } //.post-title
         &:hover .post-title,
         &:focus .post-title {
-          border-bottom: 1px dotted darkmagenta;
+          border-bottom: 1px dotted $magentadark;
         } //&:hover .post-title, &:focus .post-title
         .meta-nav {
           display: block;
@@ -345,7 +345,7 @@
         }
         @include single-transition();
         &:hover {
-          border-color: darkmagenta;
+          border-color: $magentadark;
         } //&:hover
         .post-title {
           font-size: 1.1em;
@@ -356,7 +356,7 @@
         } //.post-title
         &:hover .post-title,
         &:focus .post-title {
-          border-bottom: 1px dotted darkmagenta;
+          border-bottom: 1px dotted $magentadark;
         } //&:hover .post-title, &:focus .post-title
         .meta-nav {
           display: block;

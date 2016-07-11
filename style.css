@@ -609,7 +609,6 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 2px solid #610634;
   -moz-border-radius: 4px / 4px;
   -webkit-border-radius: 4px 4px;
   border-radius: 4px / 4px;
@@ -618,19 +617,27 @@ input[type="submit"] {
   font-size: 1.1rem;
   line-height: 1;
   padding: 0.6em 1em 0.6em;
+  border: 1px solid #C3C3C3;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
-/* line 15, sass/forms/_buttons.scss */
+/* line 17, sass/forms/_buttons.scss */
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #000000;
-  background-color: #262626;
-  color: #FFFFFF;
+  border-color: #610634;
+  color: #610634;
 }
 
-/* line 24, sass/forms/_buttons.scss */
+/* line 25, sass/forms/_buttons.scss */
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -639,10 +646,8 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  outline: 1px dotted #610634;
-  border-color: #000000;
-  background-color: #262626;
-  color: #FFFFFF;
+  border-color: #610634;
+  color: #610634;
 }
 
 /*
@@ -822,6 +827,14 @@ textarea {
   text-decoration: none;
   border: 1px solid #C3C3C3;
   width: 33%;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media (max-width: 767px) {
   /* line 103, sass/forms/_fields.scss */
@@ -830,30 +843,29 @@ textarea {
     margin: 0px auto;
   }
 }
-/* line 116, sass/forms/_fields.scss */
+/* line 118, sass/forms/_fields.scss */
 .comment-respond .comment-form .form-submit input:hover, .comment-respond .comment-form .form-submit input:focus {
-  border-color: #000000;
-  color: #FFFFFF;
-  background-color: #000000;
+  border-color: #610634;
+  color: #610634;
 }
-/* line 124, sass/forms/_fields.scss */
+/* line 125, sass/forms/_fields.scss */
 .comment-respond .comment-form label {
   width: 50%;
   display: block;
   padding-bottom: 0.2em;
   text-align: left;
 }
-/* line 130, sass/forms/_fields.scss */
+/* line 131, sass/forms/_fields.scss */
 .comment-respond .comment-form .required {
   color: firebrick;
 }
 
-/* line 137, sass/forms/_fields.scss */
+/* line 138, sass/forms/_fields.scss */
 .comment-list .comment-reply-title {
   text-align: left;
 }
 
-/* line 143, sass/forms/_fields.scss */
+/* line 144, sass/forms/_fields.scss */
 .error-404 input[type="search"],
 .search-no-results input[type="search"] {
   width: 100%;
@@ -862,7 +874,7 @@ textarea {
   box-sizing: border-box;
 }
 
-/* line 150, sass/forms/_fields.scss */
+/* line 151, sass/forms/_fields.scss */
 .error-404 .search-submit,
 .search-no-results .search-submit {
   clip: rect(1px, 1px, 1px, 1px);
@@ -1255,7 +1267,7 @@ a:hover, a:active {
 /* line 307, sass/navigation/_menus.scss */
 .post-navigation .nav-links .nav-previous a:hover,
 .comment-navigation .nav-links .nav-previous a:hover {
-  border-color: darkmagenta;
+  border-color: #610634;
 }
 /* line 310, sass/navigation/_menus.scss */
 .post-navigation .nav-links .nav-previous a .post-title,
@@ -1276,7 +1288,7 @@ a:hover, a:active {
 .post-navigation .nav-links .nav-previous a:hover .post-title, .post-navigation .nav-links .nav-previous a:focus .post-title,
 .comment-navigation .nav-links .nav-previous a:hover .post-title,
 .comment-navigation .nav-links .nav-previous a:focus .post-title {
-  border-bottom: 1px dotted darkmagenta;
+  border-bottom: 1px dotted #610634;
 }
 /* line 321, sass/navigation/_menus.scss */
 .post-navigation .nav-links .nav-previous a .meta-nav,
@@ -1324,7 +1336,7 @@ a:hover, a:active {
 /* line 347, sass/navigation/_menus.scss */
 .post-navigation .nav-links .nav-next a:hover,
 .comment-navigation .nav-links .nav-next a:hover {
-  border-color: darkmagenta;
+  border-color: #610634;
 }
 /* line 350, sass/navigation/_menus.scss */
 .post-navigation .nav-links .nav-next a .post-title,
@@ -1345,7 +1357,7 @@ a:hover, a:active {
 .post-navigation .nav-links .nav-next a:hover .post-title, .post-navigation .nav-links .nav-next a:focus .post-title,
 .comment-navigation .nav-links .nav-next a:hover .post-title,
 .comment-navigation .nav-links .nav-next a:focus .post-title {
-  border-bottom: 1px dotted darkmagenta;
+  border-bottom: 1px dotted #610634;
 }
 /* line 361, sass/navigation/_menus.scss */
 .post-navigation .nav-links .nav-next a .meta-nav,
@@ -1511,6 +1523,15 @@ a:hover, a:active {
 /* line 5, sass/site/secondary/_widgets.scss */
 .widget select {
   max-width: 100%;
+}
+
+/* line 11, sass/site/secondary/_widgets.scss */
+.widget-area .search-form {
+  border: 2px dotted cornflowerblue;
+}
+/* line 13, sass/site/secondary/_widgets.scss */
+.widget-area .search-form input[type="search"] {
+  border: 1px dotted blueviolet !important;
 }
 
 /*--------------------------------------------------------------
@@ -2418,28 +2439,35 @@ a:hover, a:active {
   color: #333;
   line-height: 1.3em;
   text-decoration: none;
-  border: 1px solid #c3c3c3;
+  outline: 1px solid #C3C3C3;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
-/* line 138, sass/site/primary/_comments.scss */
+/* line 141, sass/site/primary/_comments.scss */
 .reply a:hover,
 .reply a:focus {
-  background: #000;
-  color: #fff;
-  border-color: #000;
+  color: #610634;
+  outline: 2px solid #610634;
 }
 
-/* line 145, sass/site/primary/_comments.scss */
+/* line 147, sass/site/primary/_comments.scss */
 .comment-content ol {
   list-style-type: decimal;
 }
 
-/* line 149, sass/site/primary/_comments.scss */
+/* line 151, sass/site/primary/_comments.scss */
 .comment-content a {
   word-wrap: break-word;
 }
 
-/* line 153, sass/site/primary/_comments.scss */
+/* line 155, sass/site/primary/_comments.scss */
 .bypostauthor .avatar {
   box-sizing: content-box;
   border: 5px solid #c3c3c3;
@@ -2447,12 +2475,12 @@ a:hover, a:active {
   margin-left: -5px;
 }
 
-/* line 162, sass/site/primary/_comments.scss */
+/* line 164, sass/site/primary/_comments.scss */
 .comment-content a {
   word-wrap: break-word;
 }
 
-/* line 165, sass/site/primary/_comments.scss */
+/* line 167, sass/site/primary/_comments.scss */
 .bypostauthor {
   display: block;
 }
