@@ -1520,263 +1520,250 @@ a:hover, a:active {
   /* Make sure select elements fit in widgets. */
 }
 
-/* line 12, sass/site/secondary/_widgets.scss */
-.widget-area {
-  border: 1px dashed orangered;
+/* line 10, sass/site/secondary/_widgets.scss */
+#secondary {
   position: relative;
+  padding: 1.8em 1.4em 0px;
   background-color: #EDEDED;
-  padding: 1em;
 }
 @media (min-width: 768px) {
-  /* line 12, sass/site/secondary/_widgets.scss */
-  .widget-area {
-    border: 1px dashed darkblue;
+  /* line 10, sass/site/secondary/_widgets.scss */
+  #secondary {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 1.8em;
   }
 }
-/* line 24, sass/site/secondary/_widgets.scss */
-.widget-area .widget {
-  margin: 0px 0px 1.5em;
-}
-@media (min-width: 768px) {
-  /* line 24, sass/site/secondary/_widgets.scss */
-  .widget-area .widget {
-    float: left;
-    width: 300px;
-    margin: 0px 0.9em 1.8em 0.9em;
-  }
-}
-/* line 31, sass/site/secondary/_widgets.scss */
-.widget-area .widget .widget-title {
-  margin: 0.5em 0px;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  font-weight: 200;
-  color: #262626;
-}
-@media (max-width: 767px) {
-  /* line 31, sass/site/secondary/_widgets.scss */
-  .widget-area .widget .widget-title {
-    margin-bottom: 0px;
-  }
-}
-/* line 41, sass/site/secondary/_widgets.scss */
-.widget-area .widget ul {
-  padding: 0.7em 0px 0px 0px;
-  margin: 0px;
-  list-style: none;
-}
-/* line 45, sass/site/secondary/_widgets.scss */
-.widget-area .widget ul li {
-  display: block;
-  padding: 0.3em 0px;
-}
-@media (min-width: 30em) {
-  /* line 45, sass/site/secondary/_widgets.scss */
-  .widget-area .widget ul li {
-    margin-left: 1em;
-  }
-}
-/* line 51, sass/site/secondary/_widgets.scss */
-.widget-area .widget ul li ul,
-.widget-area .widget ul li ol {
-  margin-left: 0.5em;
-}
-/* line 55, sass/site/secondary/_widgets.scss */
-.widget-area .widget ul li:last-child {
-  padding-bottom: 0.35em;
-}
-/* line 60, sass/site/secondary/_widgets.scss */
-.widget-area .widget ol {
-  padding: 0.7em 0px 0px 0px;
-  margin: 0px;
-  list-style: none;
-}
-/* line 64, sass/site/secondary/_widgets.scss */
-.widget-area .widget ol li {
-  display: block;
-  padding: 0.3em 0px;
-}
-@media (min-width: 30em) {
-  /* line 64, sass/site/secondary/_widgets.scss */
-  .widget-area .widget ol li {
-    margin-left: 1em;
-  }
-}
-/* line 70, sass/site/secondary/_widgets.scss */
-.widget-area .widget ol li ul,
-.widget-area .widget ol li ol {
-  margin-left: 0.5em;
-}
-/* line 74, sass/site/secondary/_widgets.scss */
-.widget-area .widget ol li:last-child {
-  padding-bottom: 0.35em;
-}
-/* line 79, sass/site/secondary/_widgets.scss */
-.widget-area .widget a {
-  font-weight: 400;
-  text-decoration: none;
-  font-size: 14.4px;
-  font-size: 0.9rem;
-  border-bottom: 1px dashed #C3C3C3;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-/* line 86, sass/site/secondary/_widgets.scss */
-.widget-area .widget a:hover, .widget-area .widget a:focus {
-  color: #610634;
-  border-color: #610634;
-}
-/* line 92, sass/site/secondary/_widgets.scss */
-.widget-area .widget select {
-  width: 100%;
-  padding: 0.5em;
-}
-/* line 95, sass/site/secondary/_widgets.scss */
-.widget-area .widget select option:focus {
-  border: 1px solid #a10a57;
-}
-/* line 102, sass/site/secondary/_widgets.scss */
-.widget-area .widget-archive li {
-  color: #58555a;
-}
-/* line 107, sass/site/secondary/_widgets.scss */
-.widget-area .widget-categories .children {
-  padding-top: 0px;
-  padding-bottom: 0.5em;
-}
-/* line 114, sass/site/secondary/_widgets.scss */
-.widget-area .widget_search .search-submit {
-  display: none;
-}
-/* line 118, sass/site/secondary/_widgets.scss */
-.widget-area .widget_search label input[type="search"] {
-  box-sizing: border-box;
-  width: 100%;
-}
-/* line 121, sass/site/secondary/_widgets.scss */
-.widget-area .widget_search label input[type="search"]:focus {
-  outline: 1px solid #a10a57;
-}
-/* line 129, sass/site/secondary/_widgets.scss */
-.widget-area .widget_pages .children {
-  padding-top: 0px;
-  padding-bottom: 0.5em;
-}
-/* line 134, sass/site/secondary/_widgets.scss */
-.widget-area .widget_pages ul li {
-  padding: 0px;
-}
-/* line 136, sass/site/secondary/_widgets.scss */
-.widget-area .widget_pages ul li:last-child {
-  margin-bottom: 0.5em;
-}
-/* line 139, sass/site/secondary/_widgets.scss */
-.widget-area .widget_pages ul li a {
-  display: block;
-  padding: 0.5em 0px;
-  border-bottom: 1px dashed #C3C3C3;
-}
-/* line 148, sass/site/secondary/_widgets.scss */
-.widget-area .widget_nav_menu .sub-menu {
-  padding-top: 0px;
-  padding-bottom: 0.5em;
-}
-/* line 153, sass/site/secondary/_widgets.scss */
-.widget-area .widget_nav_menu ul li {
-  padding: 0px;
-}
-/* line 155, sass/site/secondary/_widgets.scss */
-.widget-area .widget_nav_menu ul li:last-child {
-  margin-bottom: 0.5em;
-}
-/* line 158, sass/site/secondary/_widgets.scss */
-.widget-area .widget_nav_menu ul li a {
-  display: block;
-  padding: 0.5em 0px;
-  border-bottom: 1px dashed #C3C3C3;
-}
-/* line 169, sass/site/secondary/_widgets.scss */
-.widget-area .widget_meta ul li {
-  padding: 0.3em 0px;
-}
-/* line 176, sass/site/secondary/_widgets.scss */
-.widget-area .widget_rss li {
-  margin-bottom: 1em;
-}
-/* line 179, sass/site/secondary/_widgets.scss */
-.widget-area .widget_rss li a.rsswidget {
-  padding-right: 0.5em;
-  font-size: 14.4px;
-  font-size: 0.9rem;
-  line-height: 1.4em;
-}
-/* line 185, sass/site/secondary/_widgets.scss */
-.widget-area .widget_rss li .rss-date {
-  color: #58555a;
-  font-size: 12.8px;
-  font-size: 0.8rem;
-}
-/* line 189, sass/site/secondary/_widgets.scss */
-.widget-area .widget_rss li .rssSummary {
-  padding: 0.5em 0px;
-  font-family: "Merriweather", serif;
-  font-size: 14.4px;
-  font-size: 0.9rem;
-  line-height: 1.4em;
-}
-/* line 195, sass/site/secondary/_widgets.scss */
-.widget-area .widget_rss li cite {
-  color: #58555a;
-  font-size: 12.8px;
-  font-size: 0.8rem;
-}
-/* line 202, sass/site/secondary/_widgets.scss */
-.widget-area .widget_calendar {
-  font-family: "Titillium Web", sans-serif;
-}
-/* line 204, sass/site/secondary/_widgets.scss */
-.widget-area .widget_calendar caption {
-  padding: 0.5em 0px;
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: left;
-}
-/* line 210, sass/site/secondary/_widgets.scss */
-.widget-area .widget_calendar thead {
-  background: #262626;
-  color: #FFFFFF;
-}
-/* line 214, sass/site/secondary/_widgets.scss */
-.widget-area .widget_calendar thead tr th {
-  margin-left: 1em;
-  border-bottom-width: 2px;
-}
-/* line 219, sass/site/secondary/_widgets.scss */
-.widget-area .widget_calendar thead td {
-  border: none;
-}
-/* line 222, sass/site/secondary/_widgets.scss */
-.widget-area .widget_calendar thead .pad {
-  background: #EAEAEA;
-}
-/* line 228, sass/site/secondary/_widgets.scss */
-.widget-area .textwidget {
-  font-size: 12.8px;
-  font-size: 0.8rem;
-  line-height: 1.6em;
+/* line 20, sass/site/secondary/_widgets.scss */
+#secondary .widget {
+  margin: 0px 0px 1.5em 0px;
+  padding: 1.8em;
+  background: #FFFFFF;
 }
 
+/*.widget-area {
+  border: 1px dashed orangered;
+  position: relative;
+  background-color: #EDEDED;
+  padding: 1em;
+  @include breakpoint(min-width 768px) {
+    border: 1px dashed darkblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.8em;
+  } //breakpoint(min-width 768px)
+  .widget {
+    margin: 0px 0px 1.5em;
+    @include breakpoint(min-width 768px) {
+      float: left;
+      width: 300px;
+      margin: 0px 0.9em 1.8em 0.9em;
+    } //breakpoint(min-width 768px)
+    .widget-title {
+      margin: 0.5em 0px;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      font-weight: 200;
+      color: $greydark;
+      @include breakpoint($iphone) {
+        margin-bottom: 0px;
+      }
+    } //.widget-title
+    ul {
+      padding: 0.7em 0px 0px 0px;
+      margin: 0px;
+      list-style: none;
+      li {
+        display: block;
+        padding: 0.3em 0px;
+        @include breakpoint(min-width 30em) {
+          margin-left: 1em;
+        } //breakpoint(min-width 30em)
+        ul,
+        ol {
+          margin-left: 0.5em;
+        } //ul, ol
+        &:last-child {
+          padding-bottom: 0.35em;
+        } //&:last-child
+      } //li
+    } //ul
+    ol {
+      padding: 0.7em 0px 0px 0px;
+      margin: 0px;
+      list-style: none;
+      li {
+        display: block;
+        padding: 0.3em 0px;
+        @include breakpoint(min-width 30em) {
+          margin-left: 1em;
+        } //breakpoint(min-width 30em)
+        ul,
+        ol {
+          margin-left: 0.5em;
+        } //ul, ol
+        &:last-child {
+          padding-bottom: 0.35em;
+        } //&:last-child
+      } //li
+    } //ol
+    a {
+      font-weight: 400;
+      text-decoration: none;
+      @include font-size(0.9);
+      border-bottom: 1px dashed #C3C3C3;
+      @include single-transition();
+      @include transition-duration(0.5s);
+      &:hover,
+      &:focus {
+        color: $magentadark;
+        border-color: $magentadark;
+      } //&:hover, &:focus
+    } //a
+    select {
+      width: 100%;
+      padding: 0.5em;
+      option:focus {
+        border: 1px solid $magentamed;
+      }
+    } //select
+  } //.widget
+  //ARCHIVE & CATEGORY WIDGETS
+  .widget-archive {
+    li {
+      color: $greymed;
+    } //li
+  } //.widget-archive
+  .widget-categories {
+    .children {
+      padding-top: 0px;
+      padding-bottom: 0.5em;
+    } //.children
+  } //.widget-categories
+  //SEARCH WIDGET
+  .widget_search {
+    .search-submit {
+      display: none;
+    } //.search-submit
+    label {
+      input[type="search"] {
+        box-sizing: border-box;
+        width: 100%;
+        &:focus {
+          outline: 1px solid $magentamed;
+        }
+      } //input[type="submit"]
+    } //label
+  } //.widget_search
+  //PAGES & MENU WIDGETS
+  .widget_pages {
+    .children {
+      padding-top: 0px;
+      padding-bottom: 0.5em;
+    } //.children
+    ul {
+      li {
+        padding: 0px;
+        &:last-child {
+          margin-bottom: 0.5em;
+        } //&:last-child
+        a {
+          display: block;
+          padding: 0.5em 0px;
+          border-bottom: 1px dashed #C3C3C3;
+        } //a
+      } //li
+    } //ul
+  } //.widget_pages
+  .widget_nav_menu {
+    .sub-menu {
+      padding-top: 0px;
+      padding-bottom: 0.5em;
+    } //.sub-menu
+    ul {
+      li {
+        padding: 0px;
+        &:last-child {
+          margin-bottom: 0.5em;
+        } //&:last-child
+        a {
+          display: block;
+          padding: 0.5em 0px;
+          border-bottom: 1px dashed #C3C3C3;
+        } //a
+      } //li
+    } //ul
+  } //.widget_nav_menu
+  //META WIDGETS
+  .widget_meta {
+    ul {
+      li {
+        padding: 0.3em 0px;
+      } //li
+    } //ul
+  } //.widget_meta
+  //RSS WIDGET
+  .widget_rss {
+    li {
+      margin-bottom: 1em;
+      a {
+        &.rsswidget {
+          padding-right: 0.5em;
+          @include font-size(0.9);
+          line-height: 1.4em;
+        } //&.rsswidget
+      } //a
+      .rss-date {
+        color: $greymed;
+        @include font-size(0.8);
+      } //.rss-date
+      .rssSummary {
+        padding: 0.5em 0px;
+        font-family: $font__title;
+        @include font-size(0.9);
+        line-height: 1.4em;
+      } //.rssSummary
+      cite {
+        color: $greymed;
+        @include font-size(0.8);
+      } //cite
+    } //li
+  } //.widget_rss
+  //CALENDAR WIDGET
+  .widget_calendar {
+    font-family: $font__main;
+    caption {
+      padding: 0.5em 0px;
+      @include font-size(1);
+      font-weight: 400;
+      text-align: left;
+    } //caption
+    thead {
+      border: 1px dashed lime;
+      background: $greydark;
+      color: #FFFFFF;
+      tr {
+        th {
+          margin-left: 1em;
+          border-bottom-width: 2px;
+        } //th
+      } //tr
+      td {
+        border: none;
+      } //td
+      .pad {
+        background: #EAEAEA;
+      }
+    } //thead
+  } //.widget_calendar
+  //TEXT WIDGET
+  .textwidget {
+    @include font-size(0.8);
+    line-height: 1.6em;
+  } //.textwidget
+} //.widget-area*/
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
