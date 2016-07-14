@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-#secondary {
+/*#secondary {
   position: relative;
   padding: 1.8em 1.4em 0;
   background-color: #ededed;
@@ -26,16 +26,16 @@
     width: 300px;
     margin: 0 .9em 1.8em;
   }
-}
+}*/
 
-.widget-title {
+/*.widget-title {
   margin-top: .5em;
   margin-bottom: .5em;
   font-size: 1em;
   text-transform: uppercase;
-}
+}*/
 
-.widget ul,
+/*.widget ul,
 .widget ol {
   padding: .7em 0 0;
   margin: 0;
@@ -63,8 +63,9 @@
     margin-left: 1em;
   }
 }
+*/
 
-.widget a {
+/*.widget a {
   font-weight: 700;
   text-decoration: none;
   font-size: .9em;
@@ -73,16 +74,17 @@
 .widget a:hover,
 .widget a:focus {
   text-decoration: underline;
-}
+}*/
 
 /* Make sure select elements fit in widgets. */
-.widget select {
+/*.widget select {
   width: 100%;
   padding: .5em;
-}
+}*/
 
 /* Archive and Categories widgets */
 
+/*
 .widget_archive li {
   color: #808080;
 }
@@ -91,16 +93,17 @@
   padding-top: 0;
   padding-bottom: .5em;
 }
+*/
 
 
 /* Search widget. */
-.widget_search .search-submit {
+/*.widget_search .search-submit {
   display: none;
-}
+}*/
 
 /* Pages and Menu widgets */
 
-.widget_pages .children,
+/*.widget_pages .children,
 .widget_nav_menu .sub-menu {
   padding-top: 0;
   padding-bottom: .5em;
@@ -111,9 +114,9 @@
   display: block;
   padding: 1em 0;
   border-bottom: 1px solid #c3c3c3;
-}
+}*/
 
-.site-content .widget_pages li,
+/*.site-content .widget_pages li,
 .site-content .widget_nav_menu li{
   padding: 0;
 }
@@ -123,10 +126,10 @@
   margin-bottom: .5em;
 }
 
-/* Meta widget */
+!* Meta widget *!
 .site-content .widget_meta li {
   padding: .3em 0;
-}
+}*/
 
 /* RSS widget */
 

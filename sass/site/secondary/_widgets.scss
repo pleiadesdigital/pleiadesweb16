@@ -16,88 +16,74 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 1.8em;
-  }
+  } //breakpoint(min-width 768px)
+
+  //GENERAL FOR ALL WIDGETS
   .widget {
     margin: 0px 0px 1.5em 0px;
     padding: 1.8em;
     background: #FFFFFF;
-  } //.widget
-} //secondary
-
-/*.widget-area {
-  border: 1px dashed orangered;
-  position: relative;
-  background-color: #EDEDED;
-  padding: 1em;
-  @include breakpoint(min-width 768px) {
-    border: 1px dashed darkblue;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1.8em;
-  } //breakpoint(min-width 768px)
-  .widget {
-    margin: 0px 0px 1.5em;
     @include breakpoint(min-width 768px) {
       float: left;
       width: 300px;
-      margin: 0px 0.9em 1.8em 0.9em;
+      margin: 0px 0.9em 1.8em;
     } //breakpoint(min-width 768px)
     .widget-title {
-      margin: 0.5em 0px;
-      font-size: 1.3em;
-      text-transform: uppercase;
-      font-weight: 200;
-      color: $greydark;
-      @include breakpoint($iphone) {
-        margin-bottom: 0px;
-      }
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      @include font-size(1.4);
+      text-transform: uppercases;
+      font-weight: 300;
     } //.widget-title
-    ul {
-      padding: 0.7em 0px 0px 0px;
+    ul,
+    ol {
+      padding: 0.7em 0px 0px;
       margin: 0px;
-      list-style: none;
+      list-style-type: none;
+    } //ul, ol
+    ul {
       li {
+        list-style-type: none;
         display: block;
-        padding: 0.3em 0px;
-        @include breakpoint(min-width 30em) {
-          margin-left: 1em;
-        } //breakpoint(min-width 30em)
-        ul,
-        ol {
-          margin-left: 0.5em;
-        } //ul, ol
         &:last-child {
           padding-bottom: 0.35em;
         } //&:last-child
+        ul,
+        ol {
+          margin-left: 0.5em;
+        } //ul, ol (2nd level)
+        @include breakpoint(min-width 768px) {
+          ul,
+          ol {
+            margin-left: 1em;
+          } //ul, ol (2nd level)
+        } //breakpoint(min-width 768px)
       } //li
     } //ul
     ol {
-      padding: 0.7em 0px 0px 0px;
-      margin: 0px;
-      list-style: none;
       li {
+        list-style-type: none;
         display: block;
-        padding: 0.3em 0px;
-        @include breakpoint(min-width 30em) {
-          margin-left: 1em;
-        } //breakpoint(min-width 30em)
-        ul,
-        ol {
-          margin-left: 0.5em;
-        } //ul, ol
         &:last-child {
           padding-bottom: 0.35em;
         } //&:last-child
+        ul,
+        ol {
+          margin-left: 0.5em;
+        } //ul, ol (2nd level)
+        @include breakpoint(min-width 768px) {
+          ul,
+          ol {
+            margin-left: 1em;
+          } //ul, ol (2nd level)
+        } //breakpoint(min-width 768px)
       } //li
     } //ol
     a {
       font-weight: 400;
       text-decoration: none;
-      @include font-size(0.9);
+      @include font-size(1.1);
       border-bottom: 1px dashed #C3C3C3;
-      @include single-transition();
-      @include transition-duration(0.5s);
       &:hover,
       &:focus {
         color: $magentadark;
@@ -107,145 +93,68 @@
     select {
       width: 100%;
       padding: 0.5em;
-      option:focus {
-        border: 1px solid $magentamed;
-      }
     } //select
   } //.widget
-  //ARCHIVE & CATEGORY WIDGETS
-  .widget-archive {
+
+  //ARCHIVE AND CATEGORY
+  .widget_archive {
     li {
-      color: $greymed;
+      color: $grey;
     } //li
-  } //.widget-archive
-  .widget-categories {
+  } //.widget_archive
+  .widget_categories {
     .children {
       padding-top: 0px;
-      padding-bottom: 0.5em;
+      padding-bottom: 0px;
     } //.children
-  } //.widget-categories
-  //SEARCH WIDGET
+  } //.widget_categories
+
+  //SEARCH WIDGETS
   .widget_search {
     .search-submit {
       display: none;
     } //.search-submit
-    label {
-      input[type="search"] {
-        box-sizing: border-box;
-        width: 100%;
-        &:focus {
-          outline: 1px solid $magentamed;
-        }
-      } //input[type="submit"]
-    } //label
   } //.widget_search
-  //PAGES & MENU WIDGETS
+
+  //PAGES AND MENU WIDGETS
   .widget_pages {
     .children {
       padding-top: 0px;
-      padding-bottom: 0.5em;
+      padding-bottom: 0px;
     } //.children
-    ul {
-      li {
-        padding: 0px;
-        &:last-child {
-          margin-bottom: 0.5em;
-        } //&:last-child
-        a {
-          display: block;
-          padding: 0.5em 0px;
-          border-bottom: 1px dashed #C3C3C3;
-        } //a
-      } //li
-    } //ul
+    a {
+      display: block;
+      padding: 1em 0px;
+    } //a
+    li {
+      padding: 0px;
+      &:last-child {
+        margin-bottom: 0.5em;
+      } //&:last-child
+    } //li
   } //.widget_pages
   .widget_nav_menu {
     .sub-menu {
       padding-top: 0px;
-      padding-bottom: 0.5em;
+      padding-bottom: 0px;
     } //.sub-menu
-    ul {
-      li {
-        padding: 0px;
-        &:last-child {
-          margin-bottom: 0.5em;
-        } //&:last-child
-        a {
-          display: block;
-          padding: 0.5em 0px;
-          border-bottom: 1px dashed #C3C3C3;
-        } //a
-      } //li
-    } //ul
-  } //.widget_nav_menu
-  //META WIDGETS
-  .widget_meta {
-    ul {
-      li {
-        padding: 0.3em 0px;
-      } //li
-    } //ul
-  } //.widget_meta
-  //RSS WIDGET
-  .widget_rss {
+    a {
+      display: block;
+      padding: 1em 0px;
+    } //a
     li {
-      margin-bottom: 1em;
-      a {
-        &.rsswidget {
-          padding-right: 0.5em;
-          @include font-size(0.9);
-          line-height: 1.4em;
-        } //&.rsswidget
-      } //a
-      .rss-date {
-        color: $greymed;
-        @include font-size(0.8);
-      } //.rss-date
-      .rssSummary {
-        padding: 0.5em 0px;
-        font-family: $font__title;
-        @include font-size(0.9);
-        line-height: 1.4em;
-      } //.rssSummary
-      cite {
-        color: $greymed;
-        @include font-size(0.8);
-      } //cite
+      padding: 0px;
+      &:last-child {
+        margin-bottom: 0.5em;
+      } //&:last-child
     } //li
-  } //.widget_rss
-  //CALENDAR WIDGET
-  .widget_calendar {
-    font-family: $font__main;
-    caption {
-      padding: 0.5em 0px;
-      @include font-size(1);
-      font-weight: 400;
-      text-align: left;
-    } //caption
-    thead {
-      border: 1px dashed lime;
-      background: $greydark;
-      color: #FFFFFF;
-      tr {
-        th {
-          margin-left: 1em;
-          border-bottom-width: 2px;
-        } //th
-      } //tr
-      td {
-        border: none;
-      } //td
-      .pad {
-        background: #EAEAEA;
-      }
-    } //thead
-  } //.widget_calendar
-  //TEXT WIDGET
-  .textwidget {
-    @include font-size(0.8);
-    line-height: 1.6em;
-  } //.textwidget
-} //.widget-area*/
+  } //.widget_nav_menu
+
+
+
+} //secondary
+
+
 
 
 
