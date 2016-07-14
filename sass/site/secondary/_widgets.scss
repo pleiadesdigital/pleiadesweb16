@@ -114,6 +114,12 @@
     .search-submit {
       display: none;
     } //.search-submit
+    input[type="search"] {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0.5em 1em;
+      border: 1px solid #C3C3C3;
+    }
   } //.widget_search
 
   //PAGES AND MENU WIDGETS
@@ -150,6 +156,78 @@
     } //li
   } //.widget_nav_menu
 
+  //RSS WIDGETS
+  .widget_rss {
+    li {
+      margin-bottom: 1em;
+      a {
+         &.rsswidget {
+           padding-right: 0.5em;
+           @include font-size(1);
+           line-height: 1.4em;
+         } //&.rsswidget
+      } //a
+      .rss-date {
+        color: $greydark;
+        @include font-size(1);
+      } //.rss-date
+      cite {
+        color: $greydark;
+        @include font-size(1);
+      } //cite
+      .rssSummary {
+        padding: 0.5em 0px;
+        @include font-size(0.9);
+        line-height: 1.4;
+      }
+    } //li
+  } //.widget_rss
+
+  //CALENDAR
+  .widget_calendar {
+    .calendar_wrap {
+      caption {
+        padding: 0.5em 0px;
+        @include font-size(1.1);
+        font-weight: 400;
+        text-align: left;
+      } //caption
+      thead {
+        background: #333;
+        color: #FFFFFF;
+        th {
+          border-bottom-width: 2px;
+          border: none;
+          text-align: center;
+        } //th
+      } //thead
+      tbody {
+        tr {
+          td {
+            text-align: center;
+          } //td
+        } //tr
+        .pad {
+          background: #EAEAEA;
+        } //.pad
+      } //tbody
+      tfoot {
+        td {
+          padding: 0.2em;
+          @include font-size(0.9);
+          text-align: center;
+          background: #D6D6D6;
+          border: 3px solid #FFFFFF;
+        } //td
+      } //tfoot
+    } //.calendar_wrap
+  } //.widget_calendar
+
+  //TEXT WIDGETS
+  .textwidget {
+    @include font-size(0.9);
+    line-height: 1.6em;
+  } //.textwidget
 
 
 } //secondary

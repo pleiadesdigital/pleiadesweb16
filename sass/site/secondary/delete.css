@@ -133,17 +133,16 @@
 
 /* RSS widget */
 
-
-.widget_rss li {
+/*.widget_rss li {
   margin-bottom: 1em;
 }
 .widget li a.rsswidget {
   padding-right: .5em;
   font-size: 1em;
   line-height: 1.4em;
-}
+}*/
 
-.rss-date,
+/*.rss-date,
 .widget_rss cite {
   color: #333;
   font-size: .8em;
@@ -154,21 +153,21 @@
   font-family: "Merriweather", serif;
   font-size: .8em;
   line-height: 1.4em;
-}
+}*/
 
 /* Search widget */
 
-.widget_search input[type="search"] {
+/*.widget_search input[type="search"] {
   box-sizing: border-box;
   width: 100%;
   padding: .5em 1em;
   border: 1px solid #c3c3c3;
   border-radius: 0;
-}
+}*/
 
 /* Calendar widget */
 
-.widget_calendar {
+/*.widget_calendar {
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -198,18 +197,18 @@
 
 .widget_calendar th {
   border: none;
-}
-
+}*/
+/*
 .widget_calendar .pad {
   background: #eaeaea;
-}
+}*/
 
 /* Text widget */
 
-.textwidget {
+/*.textwidget {
   font-size: .8em;
   line-height: 1.6em;
-}
+}*/
 
 
 /* Custom Recent Comments and Recent Posts widgets */

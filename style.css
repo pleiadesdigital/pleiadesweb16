@@ -1638,41 +1638,120 @@ a:hover, a:active {
 #secondary .widget_search .search-submit {
   display: none;
 }
-/* line 121, sass/site/secondary/_widgets.scss */
+/* line 117, sass/site/secondary/_widgets.scss */
+#secondary .widget_search input[type="search"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5em 1em;
+  border: 1px solid #C3C3C3;
+}
+/* line 127, sass/site/secondary/_widgets.scss */
 #secondary .widget_pages .children {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-/* line 125, sass/site/secondary/_widgets.scss */
+/* line 131, sass/site/secondary/_widgets.scss */
 #secondary .widget_pages a {
   display: block;
   padding: 1em 0px;
 }
-/* line 129, sass/site/secondary/_widgets.scss */
+/* line 135, sass/site/secondary/_widgets.scss */
 #secondary .widget_pages li {
   padding: 0px;
 }
-/* line 131, sass/site/secondary/_widgets.scss */
+/* line 137, sass/site/secondary/_widgets.scss */
 #secondary .widget_pages li:last-child {
   margin-bottom: 0.5em;
 }
-/* line 137, sass/site/secondary/_widgets.scss */
+/* line 143, sass/site/secondary/_widgets.scss */
 #secondary .widget_nav_menu .sub-menu {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-/* line 141, sass/site/secondary/_widgets.scss */
+/* line 147, sass/site/secondary/_widgets.scss */
 #secondary .widget_nav_menu a {
   display: block;
   padding: 1em 0px;
 }
-/* line 145, sass/site/secondary/_widgets.scss */
+/* line 151, sass/site/secondary/_widgets.scss */
 #secondary .widget_nav_menu li {
   padding: 0px;
 }
-/* line 147, sass/site/secondary/_widgets.scss */
+/* line 153, sass/site/secondary/_widgets.scss */
 #secondary .widget_nav_menu li:last-child {
   margin-bottom: 0.5em;
+}
+/* line 161, sass/site/secondary/_widgets.scss */
+#secondary .widget_rss li {
+  margin-bottom: 1em;
+}
+/* line 164, sass/site/secondary/_widgets.scss */
+#secondary .widget_rss li a.rsswidget {
+  padding-right: 0.5em;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.4em;
+}
+/* line 170, sass/site/secondary/_widgets.scss */
+#secondary .widget_rss li .rss-date {
+  color: #262626;
+  font-size: 16px;
+  font-size: 1rem;
+}
+/* line 174, sass/site/secondary/_widgets.scss */
+#secondary .widget_rss li cite {
+  color: #262626;
+  font-size: 16px;
+  font-size: 1rem;
+}
+/* line 178, sass/site/secondary/_widgets.scss */
+#secondary .widget_rss li .rssSummary {
+  padding: 0.5em 0px;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+/* line 189, sass/site/secondary/_widgets.scss */
+#secondary .widget_calendar .calendar_wrap caption {
+  padding: 0.5em 0px;
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: left;
+}
+/* line 195, sass/site/secondary/_widgets.scss */
+#secondary .widget_calendar .calendar_wrap thead {
+  background: #333;
+  color: #FFFFFF;
+}
+/* line 198, sass/site/secondary/_widgets.scss */
+#secondary .widget_calendar .calendar_wrap thead th {
+  border-bottom-width: 2px;
+  border: none;
+  text-align: center;
+}
+/* line 206, sass/site/secondary/_widgets.scss */
+#secondary .widget_calendar .calendar_wrap tbody tr td {
+  text-align: center;
+}
+/* line 210, sass/site/secondary/_widgets.scss */
+#secondary .widget_calendar .calendar_wrap tbody .pad {
+  background: #EAEAEA;
+}
+/* line 215, sass/site/secondary/_widgets.scss */
+#secondary .widget_calendar .calendar_wrap tfoot td {
+  padding: 0.2em;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  text-align: center;
+  background: #D6D6D6;
+  border: 3px solid #FFFFFF;
+}
+/* line 227, sass/site/secondary/_widgets.scss */
+#secondary .textwidget {
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  line-height: 1.6em;
 }
 
 /*--------------------------------------------------------------
