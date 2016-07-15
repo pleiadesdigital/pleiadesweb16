@@ -7,6 +7,8 @@
 	}
 }
 
+//WIDGET STYLES
+
 #secondary {
   position: relative;
   padding: 1.8em 1.4em 0px;
@@ -228,6 +230,91 @@
     @include font-size(0.9);
     line-height: 1.6em;
   } //.textwidget
+
+  //RECENT COMMENTS & RECENT POSTS WIDGETS
+  .widget_recent_comments {
+    ul {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      li {
+        position: relative;
+        padding: 0px 0px 1em 50px;
+        margin-bottom: 2em;
+        border-bottom: 1px solid #C3C3C3;
+        &:last-child {
+          margin-bottom: 1em;
+          border-bottom: none;
+          padding-bottom: 0px;
+        } //&:last-child
+        a {
+          display: block;
+          @include font-size(1.1);
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          } //&:hover, &:focus
+        } //a
+        &:before {
+          display: block;
+          float: left;
+          padding-top: 0.3em;
+          margin-left: -2em;
+          font-family: 'Fontawesome';
+          font-size: 22px;
+          content: "\f075";
+          color: rgba($grey, 0.5);
+          @include breakpoint($iphone) {
+            font-size: 18px;
+            font-weight: normal;
+            padding-top: 4px;
+          } //breakpoint($laptop)
+        } //&:before
+      } //li
+    } //ul
+  } //.widget_recent_comments
+
+  .widget_recent_entries {
+    ul {
+      margin-top: 1em;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      li {
+        position: relative;
+        padding: 0px 0px 1em 50px;
+        margin-bottom: 2em;
+        border-bottom: 1px solid #C3C3C3;
+        &:last-child {
+          margin-bottom: 0px;
+          border-bottom: none;
+          padding-bottom: 0px;
+        } //&:last-child
+        a {
+          display: block;
+          @include font-size(1.1);
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          } //&:hover, &:focus
+        } //a
+        &:before {
+          display: block;
+          float: left;
+          padding-top: 0.3em;
+          margin-left: -2em;
+          font-family: 'Fontawesome';
+          font-size: 22px;
+          content: "\f036";
+          color: rgba($grey, 0.5);
+          @include breakpoint($iphone) {
+            font-size: 18px;
+            font-weight: normal;
+            padding-top: 4px;
+          } //breakpoint($laptop)
+        } //&:before
+      } //li
+    }
+  } //.widget_recent_entries
 
 
 } //secondary
