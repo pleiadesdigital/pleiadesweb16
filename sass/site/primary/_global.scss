@@ -1,0 +1,143 @@
+// GLOBAL
+.site-main {
+  margin: 1.4em; //controls all site margin
+  @include font-size(1);
+  @include breakpoint($iphone) {
+    margin-top: 0px;
+    @include font-size(1.1);
+    color: royalblue;
+  } //breakpoint($iphone)
+  @include breakpoint($tablet) {
+    max-width: 40em;
+    margin: 0px auto;
+    @include font-size(1.1);
+    color: palevioletred;
+  } //breakpoint($tablet)
+  @include breakpoint($laptop) {
+    max-width: 45em;
+    margin: 0px auto;
+    @include font-size(1.2);
+    color: rebeccapurple;
+  } //breakpoint($laptop)
+  @include breakpoint($desktop) {
+    max-width: 45em;
+    margin: 0px auto;
+    @include font-size(1.3);
+    color: darkblue;
+  } //breakpoint($desktop)
+
+  //INDEX Pages Global
+  .page-header {
+    .page-title {
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: 200;
+      color: $grey;
+      text-transform: uppercase;
+      margin-bottom: 0px;
+    } //.page-title
+    .taxonomy-description {
+      margin-top: 0.5em;
+      text-align: center;
+      @include font-size(1.1);
+      font-style: italic;
+      font-weight: 100;
+      border: 1px solid #C3C3C3;
+      padding: 0.5em 1em;
+      p {
+        margin-bottom: 0px;
+      }
+    } //.taxonomy-description
+  } //page-header
+
+} //.site-main
+
+//Sidebar Right layout
+.sidebar-right {
+  @include breakpoint($desktop) {
+    .site-content {
+      .content-area { //#primary
+        float: left;
+        width: calc(100% - 306px);
+        .entry-meta {
+          width: 100%;
+          width: calc(100vw -306px);
+          left: 0px;
+          margin: 0px;
+        } //.entry-meta
+      } //.content-area
+      #secondary {
+        margin: 0px;
+        background-color: #FFFFFF;
+        padding: 1.8em 0px 0px;
+        margin: 0px;
+        .widget {
+          padding: 0px 1.8em;
+          margin-bottom: 0px;
+        } //.widget
+        &::after {
+          display: block;
+          width: 33%;
+          margin: 4em auto;
+          content: "";
+          border-bottom: 1px solid #C3C3C3;
+        } //&::after
+      } //#secondary
+      .widget-area {
+        float: right;
+        overflow: hidden;
+        width: 306px;
+        padding: 0px 1.5em;
+        border-left: 1px solid #EDEDED;
+      } //.widget-area
+    } //.site-content
+  } //breakpoint(min-width 960px)
+} //sidebar-right
+
+
+//Sidebar Left layout
+.sidebar-left {
+  @include breakpoint($desktop) {
+    .site-content {
+      .content-area { //#primary
+        float: right;
+        width: calc(100% - 306px);
+      } //.content-area
+      .entry-meta {
+        width: 100%;
+        width: calc(100vw -306px);
+        left: 0px;
+        margin: 0px;
+      } //.entry-meta
+      #secondary {
+        margin: 0px;
+        background-color: #FFFFFF;
+        padding: 1.8em 0px 0px;
+        margin: 0px;
+        .widget {
+          padding: 0px 1.8em;
+          margin-bottom: 0px;
+          &::after {
+            display: block;
+            width: 33%;
+            margin: 4em auto;
+            content: "";
+            border-bottom: 1px solid #C3C3C3;
+          } //&::after
+        } //.widget
+      } //#secondary
+      .widget-area {
+        float: left;
+        overflow: hidden;
+        width: 306px;
+        padding: 0px 1.5em;
+        border-right: 1px solid #EDEDED;
+      } //.widget-area
+    } //.site-content
+  } //breakpoint(min-width 960px)
+} //sidebar-right
+
+
+
+
+

@@ -9,21 +9,21 @@
 ( function( $ ) {
 
 	// Site title and description.
-	wp.customize( 'blogname', function( value ) {
-		value.bind( function( to ) {
+	wp.customize('blogname', function(value) {
+		value.bind( function(to) {
 			$( '.site-title a' ).text( to );
 		} );
 	} );
-	wp.customize( 'blogdescription', function( value ) {
-		value.bind( function( to ) {
-			$( '.site-description' ).text( to );
+	wp.customize('blogdescription', function(value) {
+		value.bind(function(to) {
+			$('.site-description').text(to);
 		} );
 	} );
 
 	// Header text color.
-	wp.customize( 'header_textcolor', function( value ) {
-		value.bind( function( to ) {
-			if ( 'blank' === to ) {
+	wp.customize('header_textcolor', function(value) {
+		value.bind(function(to) {
+			if ('blank' === to) {
 				$( '.site-title a, .site-description' ).css( {
 					'clip': 'rect(1px, 1px, 1px, 1px)',
 					'position': 'absolute'
@@ -39,4 +39,24 @@
 			}
 		} );
 	} );
+	// Header background color
+	wp.customize('header_color', function(value) {
+		value.bind(function(to) {
+			$('.site-header').css({
+				'background-color': to
+			});
+		});
+	});
+
+	// Custom layout options
+	wp.customize('layout_setting', function(value) {
+		value.bind(function(to) {
+			$('#page').removeClass('no-sidebar sidebar-left sidebar-right');
+			$('#page').addClass(to);
+		});
+	});
+
+
+
+
 } )( jQuery );
